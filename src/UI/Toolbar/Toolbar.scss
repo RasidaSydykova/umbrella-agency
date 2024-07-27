@@ -1,0 +1,38 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.header {
+  background-color: #0c2a4a; // to change
+  font-size: 24px;
+  color: $primary-10;
+  padding: 60px 0 40px 0;
+
+  @include xxl {
+    font-size: 20px;
+  }
+
+  @include xl {
+    font-size: 18px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      .img {
+        width: 300px;
+        height: 60px;
+
+        @include xxl {
+          width: 250px;
+        }
+
+        @include xl {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

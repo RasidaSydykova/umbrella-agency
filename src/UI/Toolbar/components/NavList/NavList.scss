@@ -1,0 +1,38 @@
+@use '../../../../styles/mixins' as *;
+
+.nav {
+  display: block;
+
+  @include lg {
+    display: none;
+  }
+
+  .lists {
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+    list-style: none;
+
+    @include xxl {
+      gap: 50px;
+    }
+
+    @include xl {
+      gap: 40px;
+    }
+
+    @include xl {
+      gap: 35px;
+    }
+
+    .arrow {
+      width: 28px;
+      height: 28px;
+
+      @include xxl {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

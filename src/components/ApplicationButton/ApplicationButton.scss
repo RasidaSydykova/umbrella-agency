@@ -1,0 +1,42 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.btn-container {
+  display: block;
+
+  @include lg {
+    display: none;
+  }
+
+  .btn {
+    font-size: inherit;
+    color: inherit;
+    background-color: $secondary-01;
+    border: none;
+    border-radius: 4px;
+    padding: 18px 24px;
+
+    @include xxl {
+      padding: 15px 20px;
+    }
+
+    @include xxl {
+      padding: 10px;
+    }
+
+    .arrow {
+      width: 28px;
+      height: 28px;
+
+      @include xxl {
+        width: 24px;
+        height: 24px;
+      }
+
+      @include xl {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
