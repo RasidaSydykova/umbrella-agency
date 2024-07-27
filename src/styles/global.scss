@@ -1,0 +1,51 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: $font-family;
+  max-width: 100vw;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 24px;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__wrapper {
+  flex: 1;
+  margin-top: 58px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @include md {
+    padding: 0 10px;
+  }
+}
