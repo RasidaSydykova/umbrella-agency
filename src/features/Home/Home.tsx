@@ -2,6 +2,7 @@ import React from 'react';
 import Main from '@/features/Home/Main/Main';
 import AboutUs from '@/features/Home/AboutUs/AboutUs';
 import OurWorks from '@/features/Home/OurWorks/OurWorks';
+import Services from '@/features/Home/Services/Services';
 import './Home.scss';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <Main />
       <AboutUs />
       <OurWorks />
+      <Services />
     </div>
   );
 };
