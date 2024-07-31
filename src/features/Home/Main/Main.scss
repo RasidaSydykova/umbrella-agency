@@ -1,0 +1,99 @@
+@use '../../../styles/mixins' as *;
+
+.hero-section {
+  margin-top: 130px;
+
+  &-banner {
+    height: 950px;
+    margin-top: -300px;
+
+    @include sm {
+      height: 534px;
+    }
+
+    &-wrapper {
+      padding-top: 250px;
+      height: 100%;
+      background: url('../../../../public/assets/main-umbrella.svg') right 80px bottom 50px no-repeat;
+      background-size: 535px 696px;
+
+      @include lg {
+        background-position: center bottom;
+        padding-top: 180px;
+        background-size: 450px 550px;
+      }
+
+      @include md {
+        background-position: center bottom;
+        background-size: 420px 520px;
+      }
+
+      @include sm {
+        background-position: center top 250px;
+        padding-top: 180px;
+        background-size: 180px 285px;
+      }
+
+      &-title {
+        font-weight: 800;
+        font-size: 76px;
+        max-width: 1010px;
+
+        @include xxl {
+          font-size: 72px;
+          max-width: 950px;
+        }
+
+        @include xl {
+          font-size: 68px;
+          max-width: 900px;
+        }
+
+        @include lg {
+          font-size: 58px;
+          max-width: 740px;
+        }
+
+        @include md {
+          font-size: 50px;
+        }
+
+        @include sm {
+          font-size: 24px;
+        }
+      }
+
+      &-subtitle {
+        font-size: 32px;
+        margin-top: 30px;
+        max-width: 790px;
+
+        @include xxl {
+          font-size: 28px;
+          max-width: 750px;
+        }
+
+        @include lg {
+          font-size: 26px;
+        }
+
+        @include md {
+          font-size: 24px;
+        }
+
+        @include sm {
+          font-size: 12px;
+        }
+      }
+
+      &-link {
+        display: none;
+
+        @include lg {
+          margin-top: 50px;
+          display: block;
+        }
+      }
+    }
+  }
+}
