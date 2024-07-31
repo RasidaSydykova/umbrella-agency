@@ -1,0 +1,80 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.about-us-card {
+  max-width: 32%;
+  text-align: center;
+  border: 2px solid #d1dceb;
+  border-radius: 6px;
+  padding: 20px 40px 40px 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include md {
+    max-width: 100%;
+  }
+
+  &-img-box {
+    max-width: 253px;
+    height: 253px;
+    //border: 1px solid red;
+
+    @include xl {
+      height: 230px;
+    }
+
+    @include lg {
+      height: 200px;
+    }
+
+    @include sm {
+      width: 110px;
+      height: 110px;
+    }
+
+    &-img {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-information {
+    margin-top: 20px;
+
+    @include xl {
+      margin-top: 0;
+    }
+
+    &-title {
+      font-size: 24px;
+      line-height: 115%;
+      text-align: center;
+      color: $neutral-01;
+      margin-bottom: 10px;
+
+      @include lg {
+        font-size: 22px;
+      }
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 115%;
+      color: $neutral-02;
+
+      @include lg {
+        font-size: 16px;
+      }
+
+      @include sm {
+        font-size: 14px;
+      }
+    }
+  }
+}
