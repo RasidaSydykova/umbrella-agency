@@ -1,0 +1,55 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.our-works-card {
+  max-width: 32%;
+  position: relative;
+
+  @include xl {
+    max-width: 31.5%;
+  }
+
+  @include lg {
+    max-width: 48%;
+  }
+
+  @include sm {
+    max-width: 90%;
+  }
+
+  &-img-box {
+    max-width: 627px;
+
+    &-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+  }
+
+  &-information {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    font-size: 30px;
+    line-height: 115%;
+
+    @include xl {
+      font-size: 24px;
+    }
+
+    @include md {
+      font-size: 20px;
+    }
+
+    &-text {
+      color: #f1f2f8;
+    }
+
+    &-bold-text {
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+}

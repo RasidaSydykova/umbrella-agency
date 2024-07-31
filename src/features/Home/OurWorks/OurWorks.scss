@@ -1,0 +1,61 @@
+@use '../../../styles/mixins' as *;
+
+.our-works {
+  margin-top: 130px;
+
+  @include lg {
+    margin-top: 100px;
+  }
+
+  @include md {
+    margin-top: 70px;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 115%;
+    color: #272727;
+    margin-bottom: 50px;
+
+    @include xl {
+      font-size: 62px;
+    }
+
+    @include lg {
+      font-size: 52px;
+    }
+
+    @include md {
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      font-size: 32px;
+    }
+
+    @include xs {
+      font-size: 24px;
+    }
+  }
+
+  &-cards-desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &-cards-mobile {
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+  }
+}
