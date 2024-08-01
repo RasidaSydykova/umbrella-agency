@@ -1,0 +1,93 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.reviews {
+  margin-top: 80px;
+  padding-bottom: 200px;
+
+  @include lg {
+    padding-bottom: 150px;
+  }
+
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 60px;
+    justify-content: space-between;
+
+    @include sm {
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 115%;
+      color: #000;
+
+      @include xl {
+        font-size: 62px;
+      }
+
+      @include lg {
+        font-size: 52px;
+      }
+
+      @include md {
+        font-size: 42px;
+      }
+
+      @include sm {
+        font-size: 32px;
+      }
+
+      @include xs {
+        font-size: 24px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include lg {
+        gap: 40px;
+      }
+
+      @include md {
+        gap: 30px;
+      }
+
+      @include sm {
+        display: none;
+      }
+
+      .button {
+        border-radius: 6px;
+        border: 2px solid $primary-03;
+        padding: 25px;
+        cursor: pointer;
+
+        @include lg {
+          padding: 20px;
+        }
+
+        @include md {
+          padding: 15px;
+        }
+
+        .arrow {
+          width: 13px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}

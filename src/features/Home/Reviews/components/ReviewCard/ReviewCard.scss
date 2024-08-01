@@ -1,0 +1,102 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.review-card {
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    background: url('../../../../../../public/assets/home/review/stars.svg') left bottom no-repeat;
+    background-size: 215px 35px;
+    padding-bottom: 60px;
+
+    @include sm {
+      background-size: 150px 28px;
+      padding-bottom: 40px;
+    }
+
+    @include xs {
+      background-size: 114px 24px;
+    }
+
+    .img-box {
+      max-width: 80px;
+      height: 80px;
+
+      .img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+
+    .information {
+      margin-left: 20px;
+
+      .name {
+        display: block;
+        font-weight: 700;
+        font-size: 30px;
+        color: $neutral-01;
+
+        @include lg {
+          font-size: 28px;
+        }
+
+        @include md {
+          font-size: 26px;
+        }
+
+        @include sm {
+          font-size: 24px;
+        }
+
+        @include xs {
+          font-size: 18px;
+        }
+
+      }
+
+      .company {
+        display: block;
+        max-width: 300px;
+        font-size: 18px;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+        color: $neutral-03;
+
+        @include md {
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .review {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+    color: $neutral-02;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+
+    @include md {
+      font-size: 20px;
+    }
+
+    @include sm {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
+  }
+}

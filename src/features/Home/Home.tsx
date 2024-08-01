@@ -3,8 +3,9 @@ import Main from '@/features/Home/Main/Main';
 import AboutUs from '@/features/Home/AboutUs/AboutUs';
 import OurWorks from '@/features/Home/OurWorks/OurWorks';
 import Services from '@/features/Home/Services/Services';
-import './Home.scss';
 import OurApproach from '@/features/Home/OurApproach/OurApproach';
+import Reviews from '@/features/Home/Reviews/Reviews';
+import './Home.scss';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <OurWorks />
       <Services />
       <OurApproach />
+      <Reviews />
     </div>
   );
 };
