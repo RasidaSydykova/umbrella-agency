@@ -1,0 +1,45 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.footer-contact-info {
+  @include lg {
+    margin-top: 20px;
+  }
+  &-link {
+    font-size: 24px;
+    display: block;
+    padding: 10px 0 5px 40px;
+
+    @include xl {
+      font-size: 22px;
+    }
+
+    @include lg {
+      font-size: 20px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
+
+    @include sm {
+      font-size: 18px;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
+  }
+
+  .phone {
+    background: url('../../../../../public/assets/footer/phone.svg') left center no-repeat;
+  }
+
+  .email {
+    background: url('../../../../../public/assets/footer/at.svg') left center no-repeat;
+  }
+
+  .address {
+    background: url('../../../../../public/assets/footer/marker.svg') left center no-repeat;
+  }
+}

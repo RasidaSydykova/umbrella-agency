@@ -1,0 +1,119 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.footer-form {
+  .form {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include lg {
+      max-width: 100%;
+    }
+
+    &-input {
+      max-width: 100%;
+      padding: 25px 10px;
+      font-size: 20px;
+      color: $primary-03;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-family: $font-family;
+
+      @include md {
+        font-size: 18px;
+        padding: 18px 10px;
+      }
+
+      @include sm {
+        font-size: 16px;
+      }
+
+      @include xs {
+        padding: 12px 10px;
+        font-size: 14px;
+      }
+    }
+
+    &-textarea {
+      font-family: $font-family;
+      resize: none;
+      height: 170px;
+    }
+
+    &-warning {
+      color: $primary-10;
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: -30px;
+
+      @include lg {
+        text-align: center;
+        align-self: center;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+
+      @include xs {
+        font-size: 12px;
+      }
+    }
+
+    &-button {
+      align-self: flex-start;
+      cursor: pointer;
+      font-size: 24px;
+      color: $primary-10;
+      background-color: $secondary-01;
+      border: none;
+      border-radius: 4px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+
+      @include lg {
+        align-self: center;
+        font-size: 22px;
+        padding: 18px 24px;
+        margin-top: -25px;
+      }
+
+      @include md {
+        padding: 15px 20px;
+        font-size: 20px;
+      }
+
+      @include xs {
+        padding: 10px 14px;
+        font-size: 16px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
+
+      &-arrow {
+        display: block;
+        width: 28px;
+        height: 28px;
+
+        @include xxl {
+          width: 24px;
+          height: 24px;
+        }
+
+        @include xl {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}

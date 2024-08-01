@@ -1,0 +1,105 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+  color: $primary-10;
+
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../../../../../public/assets/footer/line.svg') left bottom 130px no-repeat;
+    background-size: 12px 506px;
+    padding-right: 50px;
+
+    @include xl {
+      background-size: 12px 550px;
+    }
+
+    @include lg {
+      margin-bottom: 20px;
+      background: none;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 48px;
+      max-width: 700px;
+
+      @include xl {
+        font-size: 40px;
+      }
+
+      @include lg {
+        font-size: 36px;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 50px;
+      }
+
+      @include sm {
+        font-size: 28px;
+      }
+
+      @include xs {
+        font-size: 22px;
+      }
+    }
+
+    &-info {
+      display: block;
+
+      @include lg {
+        display: none;
+      }
+    }
+  }
+
+  &-right {
+
+    &-title {
+      font-size: 30px;
+      line-height: 115%;
+      color: $primary-10;
+      margin-bottom: 50px;
+      width: 500px;
+
+      @include lg {
+        font-size: 28px;
+        width: auto;
+        text-align: center;
+        padding: 0 50px;
+      }
+
+      @include md {
+        font-size: 26px;
+      }
+
+      @include sm {
+        font-size: 24px;
+      }
+
+      @include xs {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-info {
+    display: none;
+    align-self: flex-start;
+
+    @include lg {
+      display: block;
+    }
+  }
+}
