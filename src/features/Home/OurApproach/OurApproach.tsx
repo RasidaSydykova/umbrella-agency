@@ -3,7 +3,7 @@ import './OurApproach.scss';
 
 const OurApproach = () => {
   return (
-    <section className="our-approach">
+    <section className="our-approach" id="our-approach">
       <div className="container">
         <div className="our-approach-content">
           <h3 className="our-approach-content-title">Наш подход</h3>

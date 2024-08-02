@@ -13,13 +13,13 @@ const NavList = () => {
           </Link>
         </li>
         <li className="list">
-          <Link href="/">О компании</Link>
+          <Link href="/about-us">О компании</Link>
         </li>
         <li className="list">
-          <Link href="/">Наш подход</Link>
+          <Link href="#our-approach">Наш подход</Link>
         </li>
         <li className="list">
-          <Link href="/">Контакты</Link>
+          <Link href="#contacts">Контакты</Link>
         </li>
       </ul>
     </nav>
