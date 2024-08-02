@@ -1,5 +1,24 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
 .our-values {
   margin-top: 300px;
+
+  @include xl {
+    margin-top: 200px;
+  }
+
+  @include lg {
+    margin-top: 150px;
+  }
+
+  @include md {
+    margin-top: 100px;
+  }
+
+  @include sm {
+    margin-top: 50px;
+  }
 
   &-title {
     font-weight: 600;
@@ -8,14 +27,43 @@
     text-align: center;
     color: #000;
     margin-bottom: 50px;
+
+    @include xl {
+      font-size: 62px;
+      margin-bottom: 45px;
+    }
+
+    @include lg {
+      font-size: 52px;
+      margin-bottom: 35px;
+    }
+
+    @include md {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    @include sm {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    @include xs {
+      font-size: 24px;
+    }
   }
 
   &-cards {
-    &-top, &-bottom {
+    &-top,
+    &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+
+      @include xl {
+        flex-direction: column;
+      }
     }
 
     &-bottom {
