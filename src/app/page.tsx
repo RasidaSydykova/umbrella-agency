@@ -1,9 +1,9 @@
-import Toolbar from '@/UI/Toolbar/Toolbar';
+import Home from '@/features/Home/Home';
 
 const Homepage = () => {
   return (
     <div>
-      <Toolbar />
+      <Home />
     </div>
   );
 };
