@@ -1,27 +1,70 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 .banner {
-  height: 100vh;
+  height: 1058px;
   margin-top: -200px;
 
   &-wrapper {
-    //border: 1px solid red;
     position: relative;
+    z-index: 1;
 
     &-row {
       position: absolute;
       top: 0;
       right: 0;
-      padding-top: 300px;
+      padding-top: 250px;
 
       &-title {
         font-weight: 800;
         font-size: 76px;
         max-width: 1010px;
+
+        @include xxl {
+          font-size: 72px;
+          max-width: 950px;
+        }
+
+        @include xxl {
+          font-size: 68px;
+          max-width: 900px;
+        }
+
+        @include lg {
+          font-size: 58px;
+          max-width: 740px;
+        }
+
+        @include md {
+          font-size: 50px;
+        }
+
+        @include sm {
+          font-size: 24px;
+        }
       }
 
       &-subtitle {
         font-size: 32px;
         margin-top: 30px;
         max-width: 790px;
+
+        @include xxl {
+          font-size: 28px;
+          max-width: 750px;
+        }
+
+        @include lg {
+          font-size: 26px;
+        }
+
+        @include md {
+          font-size: 24px;
+        }
+
+        @include sm {
+          font-size: 12px;
+        }
       }
     }
   }

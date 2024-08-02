@@ -11,7 +11,14 @@ const Banner: React.FC<Props> = ({ src, title, subTitle }) => {
   const bannerLink = `url(${src})`;
 
   return (
-    <div className="banner" style={{ backgroundImage: bannerLink, backgroundSize: 'cover' }}>
+    <div
+      className="banner"
+      style={{
+        backgroundImage: bannerLink,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="banner-wrapper container">
         <div className="banner-wrapper-row">
           <h1 className="banner-wrapper-row-title">{title}</h1>
