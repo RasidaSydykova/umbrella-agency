@@ -1,0 +1,50 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.vacancy-card {
+  background: $primary-08;
+  border: 2px solid $primary-05;
+  border-radius: 6px;
+  padding: 40px;
+  max-width: 49.5%;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+      color: $neutral-01;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 115%;
+
+      &-title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 115%;
+        margin-bottom: 20px;
+      }
+
+      &-text {
+        line-height: 115%;
+      }
+
+      &-list {
+        margin-left: 30px;
+        line-height: 115%;
+        margin-bottom: auto;
+      }
+    }
+
+    &-link {
+      font-size: 24px;
+      color: $primary-01;
+      border: 2px solid $primary-02;
+      border-radius: 4px;
+      padding: 16px 24px;
+      cursor: pointer;
+      align-self: flex-end;
+      margin-top: 25px;
+    }
+  }
+}
