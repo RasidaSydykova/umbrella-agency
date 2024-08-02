@@ -4,25 +4,152 @@
 .our-mission {
   margin-top: 300px;
 
+  @include xl {
+    margin-top: 200px;
+  }
+
+  @include lg {
+    margin-top: 150px;
+  }
+
+  @include md {
+    margin-top: 100px;
+  }
+
+  @include sm {
+    margin-top: 50px;
+  }
+
   &-wrapper {
     padding-top: 50px;
     padding-bottom: 50px;
     color: $neutral-01;
-    background: url('../../../../public/assets/about-us/our-mission/our-mission-umbrella.png') right  center no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-    &-title {
-      font-weight: 600;
-      font-size: 72px;
-      line-height: 115%;
-      max-width: 937px;
-      margin-bottom: 40px;
+    @include lg {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    @include sm {
+      gap: 20px;
+    }
+
+    &-img-box {
+      max-width: 506px;
+      height: 506px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      @include lg {
+        max-width: 406px;
+        height: 406px;
+      }
+
+      @include md {
+        max-width: 354px;
+        height: 354px;
+      }
+
+      @include sm {
+        max-width: 314px;
+        height: 314px;
+      }
+
+      @include xs {
+        max-width: 214px;
+        height: 214px;
+      }
+
+      &-img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     &-text {
-      font-size: 48px;
-      line-height: 115%;
-      max-width: 937px;
-      padding-right: 20px;
+      @include lg {
+        text-align: center;
+        padding: 0 30px;
+      }
+
+      @include sm {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      @include xs {
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      &-title {
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 115%;
+        max-width: 937px;
+        margin-bottom: 40px;
+
+        @include xl {
+          font-size: 62px;
+          margin-bottom: 35px;
+        }
+
+        @include lg {
+          font-size: 52px;
+          margin-bottom: 30px;
+        }
+
+        @include md {
+          font-size: 42px;
+          margin-bottom: 25px;
+        }
+
+        @include sm {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+
+        @include xs {
+          font-size: 24px;
+        }
+      }
+
+      &-subtext {
+        font-size: 48px;
+        line-height: 115%;
+        max-width: 937px;
+        padding-right: 30px;
+
+        @include xxl {
+          font-size: 44px;
+        }
+
+        @include xl {
+          font-size: 40px;
+        }
+
+        @include lg {
+          font-size: 36px;
+        }
+
+        @include md {
+          font-size: 32px;
+        }
+
+        @include sm {
+          font-size: 24px;
+        }
+
+        @include xs {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
