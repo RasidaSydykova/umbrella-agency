@@ -1,0 +1,28 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.our-mission {
+  margin-top: 300px;
+
+  &-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $neutral-01;
+    background: url('../../../../public/assets/about-us/our-mission/our-mission-umbrella.png') right  center no-repeat;
+
+    &-title {
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 115%;
+      max-width: 937px;
+      margin-bottom: 40px;
+    }
+
+    &-text {
+      font-size: 48px;
+      line-height: 115%;
+      max-width: 937px;
+      padding-right: 20px;
+    }
+  }
+}
