@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import NavList from '@/UI/Toolbar/components/NavList/NavList';
-import ApplicationButton from '@/components/ApplicationButton/ApplicationButton';
+import FormLink from '@/components/FormLink/FormLink';
 import '../Toolbar/Toolbar.scss';
 
 const Toolbar = () => {
@@ -19,7 +19,27 @@ const Toolbar = () => {
           </div>
 
           <NavList />
-          <ApplicationButton />
+
+          <div className="link-button">
+            <FormLink />
+          </div>
+
+          <div className="mobile">
+            <div className="burger">
+              {open ? (
+                <img
+                  src="/assets/toolbar/close-menu.svg"
+                  alt="Close"
+                  onClick={() => setOpen(!open)}
+                />
+              ) : (
+                <img src="/assets/toolbar/menu.svg" alt="Menu" onClick={() => setOpen(!open)} />
+              )}
+            </div>
+            <div className={open ? 'menu active' : 'menu'}>
+              <NavList />
+            </div>
+          </div>
         </div>
       </div>
     </header>

@@ -2,10 +2,11 @@
 @use '../../styles/variables' as *;
 
 .header {
-  background-color: #0c2a4a; // to change
   font-size: 24px;
   color: $primary-10;
   padding: 60px 0 40px 0;
+  z-index: 888;
+  overflow: hidden;
 
   @include xxl {
     font-size: 20px;
@@ -32,6 +33,58 @@
         @include xl {
           width: 200px;
         }
+      }
+    }
+
+    .link-button {
+      display: block;
+
+      @include lg {
+        display: none;
+      }
+    }
+
+    .nav {
+      display: block;
+      @include lg {
+        display: none;
+      }
+    }
+  }
+
+  .mobile {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+
+    .burger {
+      z-index: 999;
+      top: 60px;
+      right: 30px;
+      position: absolute;
+      cursor: pointer;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      z-index: 888;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      background-color: $primary-10;
+      width: 100%;
+      transition: all 1s ease;
+      overflow: hidden;
+
+      &.active {
+        right: 0;
       }
     }
   }
