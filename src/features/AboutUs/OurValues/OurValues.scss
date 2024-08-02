@@ -1,0 +1,25 @@
+.our-values {
+  margin-top: 300px;
+
+  &-title {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 115%;
+    text-align: center;
+    color: #000;
+    margin-bottom: 50px;
+  }
+
+  &-cards {
+    &-top, &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &-bottom {
+      margin-top: 20px;
+    }
+  }
+}

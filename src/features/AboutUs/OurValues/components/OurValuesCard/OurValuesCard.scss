@@ -1,0 +1,17 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.our-values-card {
+  background: $primary-08;
+  border-radius: 8px;
+  padding: 20px 18px;
+
+  &-text {
+    font-weight: 500;
+    font-size: 30px;
+    color: $neutral-01;
+    padding-left: 70px;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
