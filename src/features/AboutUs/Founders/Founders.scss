@@ -1,0 +1,19 @@
+.founders {
+  margin-top: 150px;
+
+  &-title {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 115%;
+    text-align: center;
+    color: #000;
+  }
+
+  &-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 80px;
+  }
+}

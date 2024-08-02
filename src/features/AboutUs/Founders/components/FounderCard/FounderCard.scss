@@ -1,0 +1,70 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.founder-card {
+  max-width: 32%;
+
+  &-wrapper {
+    position: relative;
+
+    &-img-box {
+      max-width: 494px;
+      height: 567px;
+
+      &-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+
+    &-information {
+      font-size: 24px;
+      line-height: 115%;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 4px 4px 4px 0;
+      padding: 32px;
+      width: 445px;
+      height: 176px;
+      backdrop-filter: blur(34px);
+      background: rgba(20, 70, 123, 0.5);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        background: url('../../../../../../public/assets/about-us/founders/quotation-mark.svg')
+          no-repeat;
+        width: 47px;
+        height: 41px;
+      }
+
+      &-text {
+        color: #f1f2f8;
+      }
+    }
+  }
+
+  &-personal-information {
+    margin-top: 20px;
+
+    &-name {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 115%;
+      color: $neutral-01;
+    }
+
+    &-company {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 115%;
+      color: $neutral-03;
+    }
+  }
+}
