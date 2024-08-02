@@ -43,7 +43,11 @@ const FooterForm = () => {
         <p className="form-warning">Оставляя заявку вы соглашаетесь на обработку ваших данных</p>
         <button className="form-button" type="submit">
           Отправить
-          <img className="form-button-arrow" src="/assets/umbrella-arrow-white.svg" alt="umbrella" />
+          <img
+            className="form-button-arrow"
+            src="/assets/umbrella-arrow-white.svg"
+            alt="umbrella"
+          />
         </button>
       </form>
     </div>

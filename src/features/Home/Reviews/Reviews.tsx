@@ -49,6 +49,7 @@ const Reviews = () => {
           }}
         >
           {[...Array(6)].map((_, index) => (
+            // eslint-disable-next-line react/jsx-key
             <SwiperSlide>
               <ReviewCard
                 key={index}

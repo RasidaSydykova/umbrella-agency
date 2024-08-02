@@ -35,6 +35,7 @@ const OurWorks = () => {
           className="mySwiper"
         >
           {[...Array(6)].map((_, index) => (
+            // eslint-disable-next-line react/jsx-key
             <SwiperSlide>
               <OurWorkCard
                 key={index}

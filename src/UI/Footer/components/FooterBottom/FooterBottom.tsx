@@ -6,7 +6,11 @@ const FooterBottom = () => {
   return (
     <div className="footer-bottom container">
       <div className="footer-bottom-logo">
-        <img className="footer-bottom-logo-img" src="/assets/footer/footer-logo.svg" alt="Umrella agency" />
+        <img
+          className="footer-bottom-logo-img"
+          src="/assets/footer/footer-logo.svg"
+          alt="Umrella agency"
+        />
         <span className="footer-bottom-logo-rights">Все права защищены</span>
       </div>
 

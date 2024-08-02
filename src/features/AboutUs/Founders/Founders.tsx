@@ -51,6 +51,7 @@ const Founders = () => {
           }}
         >
           {[...Array(3)].map((_, index) => (
+            // eslint-disable-next-line react/jsx-key
             <SwiperSlide>
               <FounderCard
                 key={index}
