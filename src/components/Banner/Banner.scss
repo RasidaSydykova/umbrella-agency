@@ -4,6 +4,16 @@
 .banner {
   height: 1058px;
   margin-top: -200px;
+  background-position: bottom center;
+  background-size: cover;
+
+  @include lg {
+    height: 1300px;
+  }
+
+  @include sm {
+    height: 1200px;
+  }
 
   &-wrapper {
     position: relative;
@@ -15,24 +25,35 @@
       right: 0;
       padding-top: 250px;
 
+      @include xl {
+        padding-top: 200px;
+      }
+
+      @include lg {
+        left: 30px;
+       padding-right: 30px;
+      }
+
+      @include md {
+        padding-top: 250px;
+      }
+
       &-title {
         font-weight: 800;
         font-size: 76px;
         max-width: 1010px;
 
         @include xxl {
-          font-size: 72px;
-          max-width: 950px;
-        }
-
-        @include xxl {
           font-size: 68px;
           max-width: 900px;
         }
 
+        @include xl {
+          font-size: 60px;
+        }
+
         @include lg {
           font-size: 58px;
-          max-width: 740px;
         }
 
         @include md {
@@ -40,22 +61,32 @@
         }
 
         @include sm {
+          font-size: 32px;
+        }
+
+        @include xs {
           font-size: 24px;
         }
       }
 
       &-subtitle {
-        font-size: 32px;
+        font-size: 28px;
         margin-top: 30px;
-        max-width: 790px;
+        max-width: 690px;
+        padding-right: 30px;
 
         @include xxl {
           font-size: 28px;
-          max-width: 750px;
+          max-width: 600px;
+        }
+
+        @include xl {
+          font-size: 26px;
+          max-width: 490px;
         }
 
         @include lg {
-          font-size: 26px;
+          max-width: 100%;
         }
 
         @include md {
@@ -63,6 +94,10 @@
         }
 
         @include sm {
+          font-size: 16px;
+        }
+
+        @include xs {
           font-size: 12px;
         }
       }

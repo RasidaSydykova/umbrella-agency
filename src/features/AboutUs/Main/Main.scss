@@ -1,3 +1,13 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
 .about-us-main {
 
+  &-banner-xxl {
+    display: block;
+  }
+
+  &-banner-md {
+    display: none;
+  }
 }

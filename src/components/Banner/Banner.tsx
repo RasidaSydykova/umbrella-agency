@@ -15,7 +15,6 @@ const Banner: React.FC<Props> = ({ src, title, subTitle }) => {
       className="banner"
       style={{
         backgroundImage: bannerLink,
-        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}
     >
