@@ -8,6 +8,14 @@
   padding: 40px;
   max-width: 49.5%;
 
+  @include xl {
+    max-width: 48.5%;
+  }
+
+  @include lg {
+    max-width: 100%;
+  }
+
   &-wrapper {
     display: flex;
     flex-direction: column;
@@ -18,11 +26,31 @@
       font-size: 24px;
       line-height: 115%;
 
+      @include md {
+        font-size: 20px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
+
       &-title {
         font-weight: 700;
         font-size: 30px;
         line-height: 115%;
         margin-bottom: 20px;
+
+        @include md {
+          font-size: 24px;
+        }
+
+        @include sm {
+          font-size: 20px;
+        }
+
+        @include xs {
+          font-size: 16px;
+        }
       }
 
       &-text {
@@ -45,6 +73,14 @@
       cursor: pointer;
       align-self: flex-end;
       margin-top: 25px;
+
+      @include md {
+        font-size: 20px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
     }
   }
 }

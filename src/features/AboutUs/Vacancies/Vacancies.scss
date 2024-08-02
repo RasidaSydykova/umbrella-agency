@@ -1,6 +1,25 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
 .vacancies {
   margin-top: 200px;
   margin-bottom: 200px;
+
+  @include xl {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+
+  @include lg {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
 
   &-title {
     font-weight: 600;
@@ -8,6 +27,30 @@
     line-height: 115%;
     color: #000;
     margin-bottom: 50px;
+
+    @include xl {
+      font-size: 62px;
+      margin-bottom: 35px;
+    }
+
+    @include lg {
+      font-size: 52px;
+      margin-bottom: 30px;
+    }
+
+    @include md {
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    @include xs {
+      font-size: 24px;
+    }
   }
 
   &-cards {
