@@ -1,0 +1,93 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.process {
+  margin-bottom: 200px;
+  color: $neutral-01;
+  position: relative;
+
+  &-info {
+    text-align: center;
+    border-bottom: 2px dashed $primary-05;
+    padding-bottom: 20px;
+
+    &-title {
+      font-size: 48px;
+      margin-bottom: 30px;
+
+      @include xxl {
+        font-size: 44px;
+      }
+
+      @include xl {
+        font-size: 40px;
+      }
+
+      @include lg {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      @include md {
+        font-size: 32px;
+      }
+
+      @include sm {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      @include xs {
+        font-size: 24px;
+      }
+    }
+
+    &-text {
+      font-size: 30px;
+
+      @include xxl {
+        font-size: 28px;
+      }
+
+      @include xl {
+        font-size: 26px;
+      }
+
+      @include lg {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 22px;
+      }
+
+      @include sm {
+        font-size: 20px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-steps {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-img-box {
+    max-width: 676px;
+    height: 674px;
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+
+    &-img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

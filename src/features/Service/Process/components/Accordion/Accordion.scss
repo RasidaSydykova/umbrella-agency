@@ -1,0 +1,125 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.accordion-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  z-index: 2;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  .accordion {
+    border: 1px dashed $primary-03;
+    border-radius: 6px;
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    width: 622px;
+    background-color: $primary-07;
+    align-self: flex-start;
+
+    @include md {
+      width: 100%;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      color: $primary-01;
+
+      @include xl {
+        font-size: 26px;
+      }
+
+      @include lg {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 22px;
+      }
+
+      @include sm {
+        font-size: 20px;
+      }
+
+      @include xs {
+        font-size: 16px;
+      }
+
+      &-index {
+        display: block;
+        margin-right: 20px;
+        background: #fff;
+        border-radius: 50%;
+        padding: 15px 30px;
+        font-weight: 700;
+        font-size: 36px;
+        color: $primary-02;
+
+        @include sm {
+          font-size: 22px;
+          padding: 15px 24px;
+        }
+
+        @include xs {
+          font-size: 12px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: $neutral-10;
+    background-color: $primary-02;
+    max-width: 622px;
+
+    @include md {
+      max-width: 100%;
+    }
+  }
+
+  .card {
+    width: 778px;
+
+    @include md {
+      width: 100%;
+    }
+
+    &-wrapper {
+      &-list {
+        color: $neutral-01;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 60px;
+
+        @include lg {
+          font-size: 22px;
+        }
+
+        @include md {
+         padding-left: 30px;
+          margin-top: 20px;
+        }
+
+        @include sm {
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
