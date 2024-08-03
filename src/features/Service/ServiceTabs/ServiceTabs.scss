@@ -1,0 +1,164 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.service-tabs {
+  &-content {
+    color: $neutral-01;
+
+    &-box {
+      background-color: $primary-07;
+      padding: 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include md {
+        padding: 20px 0;
+      }
+
+      @include sm {
+        padding: 12px 0;
+      }
+
+      &-inner {
+        max-width: 1150px;
+
+        @include md {
+          width: 100%;
+        }
+      }
+    }
+
+    &-info {
+      max-width: 1150px;
+      margin: 200px auto;
+
+      @include lg {
+        margin: 150px auto;
+      }
+
+      @include md {
+        margin: 100px auto;
+      }
+
+      &-title {
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 115%;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include xl {
+          font-size: 62px;
+        }
+
+        @include lg {
+          font-size: 52px;
+        }
+
+        @include md {
+          font-size: 42px;
+          margin-bottom: 20px;
+        }
+
+        @include sm {
+          font-size: 32px;
+        }
+
+        @include xs {
+          font-size: 24px;
+        }
+      }
+
+      &-text {
+        font-size: 30px;
+        line-height: 115%;
+        text-align: center;
+
+        @include xxl {
+          font-size: 28px;
+        }
+
+        @include xl {
+          font-size: 26px;
+        }
+
+        @include lg {
+          font-size: 24px;
+        }
+
+        @include md {
+          font-size: 22px;
+        }
+
+        @include sm {
+          font-size: 20px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.css-heg063-MuiTabs-flexContainer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+
+  @include md {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+  }
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  font-size: 24px !important;
+  text-transform: capitalize !important;
+
+  @include xxl {
+    font-size: 22px !important;
+  }
+
+  @include md {
+    font-size: 20px !important;
+  }
+
+  @include xs {
+    font-size: 14px !important;
+  }
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  white-space: nowrap !important;
+  max-width: 400px !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: $primary-01 !important;
+  border-bottom: 2px solid $primary-01 !important;
+
+  @include xxl {
+    font-size: 22px !important;
+  }
+
+  @include md {
+    font-size: 20px !important;
+  }
+
+  @include xs {
+    font-size: 14px !important;
+  }
+}
+
+.css-1aquho2-MuiTabs-indicator {
+  display: none !important;
+}
+
+.css-1gsv261 {
+  border: none !important;
+}
