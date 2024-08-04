@@ -1,0 +1,76 @@
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
+
+.work-start-card {
+  border: 1px dashed $primary-03;
+  border-radius: 6px;
+  padding: 20px;
+  max-width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include md {
+    max-width: 100%;
+  }
+
+  @include sm {
+    gap: 10px;
+  }
+
+  &-index {
+    display: block;
+    margin-right: 20px;
+    background: $primary-02;
+    border-radius: 50%;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 36px;
+    color: $primary-10;
+    align-self: flex-start;
+
+    @include sm {
+      font-size: 22px;
+      padding: 15px 24px;
+    }
+
+    @include xs {
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: $neutral-01;
+
+    @include xl {
+      font-size: 26px;
+    }
+
+    @include lg {
+      font-size: 24px;
+    }
+
+    @include md {
+      font-size: 22px;
+    }
+
+    @include sm {
+      font-size: 20px;
+    }
+
+    @include xs {
+      font-size: 16px;
+    }
+  }
+
+  &-text {
+    font-size: 20px;
+    line-height: 115%;
+    color: $neutral-01;
+  }
+}
