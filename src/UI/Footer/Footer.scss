@@ -2,7 +2,7 @@
 @use '../../styles/variables' as *;
 
 .footer {
-  background: url('../../../public/assets/footer/img.jpg') no-repeat;
+  background: url('../../../public/assets/footer/img.jpg') center no-repeat;
   background-size: cover;
   padding-bottom: 50px;
   color: $primary-10;

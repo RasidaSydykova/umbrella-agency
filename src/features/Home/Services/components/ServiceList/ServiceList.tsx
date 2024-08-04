@@ -16,7 +16,7 @@ const ServiceList = () => {
         </h6>
         {[...Array(6)].map((_, index) => (
           <li className="services-list-content-item" key={index}>
-            <Link href="/public">Разработка стратегии Маркетинг 360</Link>
+            <Link href="/service/1">Разработка стратегии Маркетинг 360</Link>
           </li>
         ))}
       </ul>

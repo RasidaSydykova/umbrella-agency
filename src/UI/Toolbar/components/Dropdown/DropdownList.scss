@@ -1,0 +1,17 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.dropdown-lists {
+  max-width: 32%;
+
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-item {
+      font-size: 22px;
+    }
+  }
+}

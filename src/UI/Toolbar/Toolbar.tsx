@@ -10,34 +10,58 @@ const Toolbar = () => {
 
   return (
     <header className="header">
-      <div className="container">
-        <div className="row">
-          <div className="logo">
-            <Link className="link" href="/">
-              <img className="img" src="/assets/toolbar/logo.svg" alt="Umrella agency" />
-            </Link>
-          </div>
-
-          <NavList />
-
-          <div className="link-button">
-            <FormLink />
-          </div>
-
-          <div className="mobile">
-            <div className="burger">
-              {open ? (
+      <div className="content">
+        <div className="container">
+          <div className="header-wrapper">
+            <div className="header-wrapper-logo-desktop">
+              <Link className="header-wrapper-logo-desktop-link" href="/">
                 <img
-                  src="/assets/toolbar/close-menu.svg"
-                  alt="Close"
-                  onClick={() => setOpen(!open)}
+                  className="header-wrapper-logo-desktop-logo-img"
+                  src="/assets/toolbar/logo.svg"
+                  alt="Umrella agency"
                 />
-              ) : (
-                <img src="/assets/toolbar/menu.svg" alt="Menu" onClick={() => setOpen(!open)} />
-              )}
+              </Link>
             </div>
-            <div className={open ? 'menu active' : 'menu'}>
+
+            <div className="header-wrapper-nav">
               <NavList />
+            </div>
+
+            <div className="header-wrapper-link-button">
+              <FormLink />
+            </div>
+
+            <div className="header-wrapper-mobile">
+              <div className="header-wrapper-mobile-burger">
+                {open ? (
+                  <img
+                    src="/assets/toolbar/close-menu.svg"
+                    alt="Close"
+                    onClick={() => setOpen(!open)}
+                  />
+                ) : (
+                  <img src="/assets/toolbar/menu.svg" alt="Menu" onClick={() => setOpen(!open)} />
+                )}
+              </div>
+              <div
+                className={
+                  open ? 'header-wrapper-mobile-menu active' : 'header-wrapper-mobile-menu'
+                }
+              >
+                <div className="header-wrapper-mobile-menu-logo">
+                  <Link className="header-wrapper-mobile-menu-logo-link" href="/">
+                    <img
+                      className="header-wrapper-mobile-menu-logo-img"
+                      src="/assets/toolbar/logo-mobile.svg"
+                      alt="Umrella agency"
+                    />
+                  </Link>
+                </div>
+                <div className="header-wrapper-mobile-menu-nav">
+                  <NavList />
+                  <FormLink />
+                </div>
+              </div>
             </div>
           </div>
         </div>
