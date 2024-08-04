@@ -6,8 +6,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  position: relative;
-  z-index: 2;
 
   @include md {
     flex-direction: column;

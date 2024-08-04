@@ -9,9 +9,21 @@
   align-items: center;
   justify-content: space-between;
 
+  @include xl {
+    margin-bottom: 150px;
+  }
+
+  @include lg {
+    margin-bottom: 100px;
+  }
+
   @include md {
     flex-direction: column;
     justify-content: center;
+  }
+
+  @include sm {
+    margin-bottom: 50px;
   }
 
  &-text {
