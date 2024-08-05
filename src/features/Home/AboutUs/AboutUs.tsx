@@ -8,7 +8,7 @@ const AboutUs = () => {
     <section className="about-us container">
       <div className="about-us-cards">
         <AboutUsCard
-          img="/assets/home/about-us/line-chart-1.svg"
+          img="/assets/home/about-us/line-chart-1.gif"
           title="Комплексная диагностика и поддержка"
           text="Мы не просто разрабатываем стратегию и план действий –
           мы сопровождаем вас на каждом этапе внедрения рекомендаций по продвижению,
@@ -16,14 +16,14 @@ const AboutUs = () => {
           наилучших результатов."
         />
         <AboutUsCard
-          img="/assets/home/about-us/line-chart-2.svg"
+          img="/assets/home/about-us/line-chart-2.gif"
           title="Экспертная команда с обширным опытом"
           text="Наша команда состоит из профессионалов с многолетним опытом работы как на стороне
           агентств, так и на стороне клиентов. Это позволяет нам понимать ваши потребности и
           предлагать наиболее эффективные решения."
         />
         <AboutUsCard
-          img="/assets/home/about-us/line-chart-3.svg"
+          img="/assets/home/about-us/line-chart-3.gif"
           title="Точная и эффективная аналитика"
           text="Мы предоставляем всесторонний анализ всех ваших маркетинговых активностей на первом
           этапе партнерства, начиная со стратегии до тактики и используемых механик, чтобы выявить
