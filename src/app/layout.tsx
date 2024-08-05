@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import '../styles/global.scss';
 import Toolbar from '@/UI/Toolbar/Toolbar';
 import { montserrat } from '../../fontConfig';
-import Footer from '@/UI/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +18,8 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Toolbar />
         <div>{children}</div>
-        <Footer />
+        {/*<FooterBottom />*/}
+        {/*/!*<Footer />*!/*/}
       </body>
     </html>
   );

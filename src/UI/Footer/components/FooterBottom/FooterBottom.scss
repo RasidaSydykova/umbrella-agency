@@ -1,95 +1,97 @@
 @use '../../../../styles/mixins' as *;
 @use '../../../../styles/variables' as *;
 
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include lg {
-    flex-direction: column;
-  }
-
-  &-logo {
+.footerBottom {
+  .footer-bottom {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-    &-img {
-      max-width: 150px;
-      height: 160px;
-    }
-
-    &-rights {
-      font-size: 16px;
-      display: block;
-      max-width: 300px;
-      margin-top: 30px;
-    }
-  }
-
-  &-nav {
     @include lg {
-      text-align: center;
-      margin-top: 30px;
+      flex-direction: column;
     }
 
-    &-lists {
+    &-logo {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      list-style: none;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 115%;
-      color: $primary-10;
 
-      @include xl {
-        font-size: 22px;
+      &-img {
+        max-width: 150px;
+        height: 160px;
       }
+
+      &-rights {
+        font-size: 16px;
+        display: block;
+        max-width: 300px;
+        margin-top: 30px;
+      }
+    }
+
+    &-nav {
+      @include lg {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      &-lists {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        list-style: none;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 115%;
+        color: $primary-10;
+
+        @include xl {
+          font-size: 22px;
+        }
+
+        @include lg {
+          font-size: 20px;
+        }
+
+        @include md {
+          font-size: 18px;
+        }
+
+        @include sm {
+          font-size: 18px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
       @include lg {
-        font-size: 20px;
+        margin-top: 30px;
+        flex-direction: row;
       }
 
-      @include md {
-        font-size: 18px;
+      .link {
+        display: block;
+        padding: 30px;
       }
 
-      @include sm {
-        font-size: 18px;
+      .whatsapp {
+        background: url('../../../../../public/assets/footer/whats-app.svg') center no-repeat;
       }
 
-      @include xs {
-        font-size: 14px;
+      .instagram {
+        background: url('../../../../../public/assets/footer/instagram.svg') center no-repeat;
       }
-    }
-  }
 
-  &-social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    @include lg {
-      margin-top: 30px;
-      flex-direction: row;
-    }
-
-    .link {
-      display: block;
-      padding: 30px;
-    }
-
-    .whatsapp {
-      background: url('../../../../../public/assets/footer/whats-app.svg') center no-repeat;
-    }
-
-    .instagram {
-      background: url('../../../../../public/assets/footer/instagram.svg') center no-repeat;
-    }
-
-    .facebook {
-      background: url('../../../../../public/assets/footer/facebook.svg') center no-repeat;
+      .facebook {
+        background: url('../../../../../public/assets/footer/facebook.svg') center no-repeat;
+      }
     }
   }
 }

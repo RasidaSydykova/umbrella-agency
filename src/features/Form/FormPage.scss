@@ -1,12 +1,29 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-.form {
-  //background: url('../../../public/assets/footer/img.jpg') center no-repeat;
+.formPage {
+  background: url('../../../public/assets/footer/img.jpg') center no-repeat;
   background-size: cover;
-  padding-top: 300px;
-  margin-top: -200px;
   padding-bottom: 50px;
-  position: relative;
-  z-index: 880;
+  color: $primary-10;
+
+  .top {
+    border-bottom: 1px solid $primary-03;
+    padding-bottom: 120px;
+    padding-top: 200px;
+    margin-top: -200px;
+
+    @include lg {
+      border: none;
+      padding-bottom: 80px;
+    }
+  }
+
+  .bottom {
+    padding-top: 80px;
+
+    @include lg {
+      padding-top: 0;
+    }
+  }
 }
