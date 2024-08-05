@@ -31,6 +31,7 @@ const Founders = () => {
             nextEl: '.mySwiper__btns__next',
             prevEl: '.mySwiper__btns__prev',
           }}
+          loop={true}
           modules={[Pagination, Navigation]}
           style={{ overflow: 'visible' }}
           className="mySwiper"

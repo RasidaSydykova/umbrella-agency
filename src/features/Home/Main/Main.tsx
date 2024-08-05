@@ -8,7 +8,7 @@ const Main = () => {
     <section className="hero-section">
       <div
         className="hero-section-banner"
-        style={{ backgroundImage: bannerLink, backgroundSize: 'cover' }}
+        style={{ backgroundImage: bannerLink, backgroundSize: 'contain' }}
       >
         <div className="hero-section-banner-wrapper container">
           <h1 className="hero-section-banner-wrapper-title">

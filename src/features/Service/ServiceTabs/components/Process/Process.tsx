@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Accordion from '@/features/Service/Process/components/Accordion/Accordion';
+import Accordion from '@/features/Service/ServiceTabs/components/Process/components/Accordion/Accordion';
 import './Process.scss';
 
 const Process = () => {

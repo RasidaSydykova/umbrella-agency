@@ -1,5 +1,5 @@
-@use '../../../styles/mixins' as *;
-@use '../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
 
 .work-start-steps {
   margin-bottom: 200px;
@@ -93,7 +93,8 @@
       font-size: 48px;
       color: $primary-01;
       padding-bottom: 50px;
-      background: url('../../../../public/assets/service/arrow-up.svg') center bottom no-repeat;
+      background: url('../../../../../../public/assets/service/arrow-up.svg') center bottom
+        no-repeat;
       background-size: 48px;
 
       @include xxl {

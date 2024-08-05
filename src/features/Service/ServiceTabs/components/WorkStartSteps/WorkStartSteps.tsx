@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkStartCard from '@/features/Service/WorkStartSteps/components/WorkStartCard/WorkStartCard';
+import WorkStartCard from '@/features/Service/ServiceTabs/components/WorkStartSteps/components/WorkStartCard/WorkStartCard';
 import './WorkStartSteps.scss';
 
 const WorkStartSteps = () => {

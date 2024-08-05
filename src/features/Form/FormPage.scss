@@ -1,2 +1,12 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
+
+.form {
+  //background: url('../../../public/assets/footer/img.jpg') center no-repeat;
+  background-size: cover;
+  padding-top: 300px;
+  margin-top: -200px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 880;
+}

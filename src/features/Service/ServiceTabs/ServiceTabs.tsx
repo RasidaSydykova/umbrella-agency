@@ -3,6 +3,9 @@ import React from 'react';
 import './ServiceTabs.scss';
 import { Box, Tab, Tabs } from '@mui/material';
 import CustomTabPanel from '@/features/Service/ServiceTabs/components/CustomTabPanel/CustomTabPanel';
+import Process from '@/features/Service/ServiceTabs/components/Process/Process';
+import Team from '@/features/Service/ServiceTabs/components/Team/Team';
+import WorkStartSteps from '@/features/Service/ServiceTabs/components/WorkStartSteps/WorkStartSteps';
 
 const ServiceTabs = () => {
   const [value, setValue] = React.useState<number>(0);
@@ -51,6 +54,11 @@ const ServiceTabs = () => {
                 Наши эксперты учитывают рыночные тенденции и используют передовые инструменты для
                 оптимизации, обеспечивая максимальную отдачу от ваших рекламных инвестиций.
               </p>
+            </div>
+            <div>
+              <Process />
+              <Team />
+              <WorkStartSteps />
             </div>
           </CustomTabPanel>
         ))}
