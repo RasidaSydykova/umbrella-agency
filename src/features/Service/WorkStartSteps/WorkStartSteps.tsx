@@ -7,21 +7,24 @@ const WorkStartSteps = () => {
     {
       index: 1,
       title: 'Lorem ipsum dolor sit amet consectetur',
-      text: 'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
+      text:
+        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
         'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
         'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
     },
     {
       index: 2,
       title: 'Lorem ipsum dolor sit amet consectetur',
-      text: 'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
+      text:
+        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
         'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
         'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
     },
     {
       index: 3,
       title: 'Lorem ipsum dolor sit amet consectetur',
-      text: 'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
+      text:
+        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
         'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
         'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
     },
@@ -32,12 +35,7 @@ const WorkStartSteps = () => {
       <h4 className="work-start-steps-title">До начала работы:</h4>
       <div className="work-start-steps-cards">
         {cardsData.map((card, i) => (
-          <WorkStartCard
-            key={i}
-            index={card.index}
-            title={card.title}
-            text={card.text}
-          />
+          <WorkStartCard key={i} index={card.index} title={card.title} text={card.text} />
         ))}
       </div>
       <div className="start">

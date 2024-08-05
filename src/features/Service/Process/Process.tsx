@@ -20,11 +20,11 @@ const Process = () => {
   ];
 
   const accordionsData = [
-    { index: 1, title: "Lorem ipsum dolor sit amet consectetur", list: processList },
-    { index: 2, title: "Lorem ipsum dolor sit amet consectetur", list: processList },
-    { index: 3, title: "Lorem ipsum dolor sit amet consectetur", list: processList },
-    { index: 4, title: "Lorem ipsum dolor sit amet consectetur", list: processList },
-    { index: 5, title: "Lorem ipsum dolor sit amet consectetur", list: processList }
+    { index: 1, title: 'Lorem ipsum dolor sit amet consectetur', list: processList },
+    { index: 2, title: 'Lorem ipsum dolor sit amet consectetur', list: processList },
+    { index: 3, title: 'Lorem ipsum dolor sit amet consectetur', list: processList },
+    { index: 4, title: 'Lorem ipsum dolor sit amet consectetur', list: processList },
+    { index: 5, title: 'Lorem ipsum dolor sit amet consectetur', list: processList },
   ];
 
   return (
