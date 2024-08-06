@@ -14,6 +14,7 @@ const FooterForm = () => {
           // value={state.name}
           // onChange={inputChange}
         />
+
         <input
           className="form-input"
           type="tel"

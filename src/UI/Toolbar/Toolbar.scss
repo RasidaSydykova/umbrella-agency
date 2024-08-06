@@ -5,8 +5,8 @@
   font-size: 24px;
   color: $primary-10;
   padding: 60px 0 40px 0;
-  //z-index: 888;
-  //position: relative;
+  z-index: 888;
+  position: relative;
 
   @include xxl {
     font-size: 20px;
@@ -84,7 +84,7 @@
 
       &-burger {
         z-index: 999;
-        top: 65px;
+        top: 15px;
         right: 30px;
         position: absolute;
         cursor: pointer;
@@ -123,7 +123,7 @@
         color: black;
 
         &-logo {
-          padding-top: 60px;
+          padding-top: 70px;
           padding-left: 20px;
 
           &-img {

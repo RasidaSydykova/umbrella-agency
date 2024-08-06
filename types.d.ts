@@ -27,5 +27,10 @@ export interface Founder {
 export interface Service {
   id: number;
   title: string;
-  category: string[];
+  category: [
+    {
+      id: number;
+      title: string;
+    },
+  ];
 }

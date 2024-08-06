@@ -6,7 +6,13 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  height: 100vh;
+  background: url('../../../public/assets/main-img.jpeg') center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   &-wrapper {
     text-align: center;

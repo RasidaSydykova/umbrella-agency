@@ -5,16 +5,11 @@ import NavList from '@/UI/Toolbar/components/NavList/NavList';
 import FormLink from '@/components/FormLink/FormLink';
 import '../Toolbar/Toolbar.scss';
 
-interface Props {
-  background: string;
-  color: string;
-}
-
-const Toolbar: React.FC<Props> = ({ background, color }) => {
+const Toolbar = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="header" style={{ backgroundColor: `${background}`, color: `${color}` }}>
+    <header className="header">
       <div className="content">
         <div className="container">
           <div className="header-wrapper">
@@ -22,8 +17,8 @@ const Toolbar: React.FC<Props> = ({ background, color }) => {
               <Link className="header-wrapper-logo-desktop-link" href="/">
                 <img
                   className="header-wrapper-logo-desktop-logo-img"
-                  src="/assets/toolbar/logo.svg"
-                  alt="Umrella agency"
+                  src="/assets/toolbar/logo.svg" // Default logo
+                  alt="Umbrella agency"
                 />
               </Link>
             </div>

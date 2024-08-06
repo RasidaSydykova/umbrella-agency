@@ -18,10 +18,8 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body className={montserrat.className}>
-          <Toolbar background="inherit" color="$primary-10" />
+          <Toolbar />
           <div>{children}</div>
-          {/*<FooterBottom />*/}
-          {/*/!*<Footer />*!/*/}
         </body>
       </html>
     </StoreProvider>

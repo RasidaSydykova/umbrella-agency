@@ -5,14 +5,14 @@ import './FormPage.scss';
 
 const FormPage = () => {
   return (
-    <section className="formPage">
-      <div className="top">
-        <FooterTop />
-      </div>
-      <div className="bottom">
-        <FooterBottom />
-      </div>
-    </section>
+      <section className="formPage">
+        <div className="top">
+          <FooterTop />
+        </div>
+        <div className="bottom">
+          <FooterBottom />
+        </div>
+      </section>
   );
 };
 
