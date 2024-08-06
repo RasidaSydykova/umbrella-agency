@@ -7,7 +7,7 @@
   background: url('../../../../public/assets/home/our-approach/umbrella-big-icon.svg') left center
     no-repeat;
   background-size: 671px 579px;
-  border: 1px solid red;
+  position: relative;
 
   @media (max-width: 1500px) {
     background-size: 571px 479px;
@@ -18,31 +18,44 @@
   }
 
   @include lg {
+    background-size: 371px 339px;
     background-position: top center;
+    padding-bottom: 500px;
   }
 
   @include md {
-    background-size: 371px 339px;
+    background-size: 351px 309px;
   }
 
   @include sm {
-    background-size: 336px 289px;
+    background-size: 336px 259px;
+  }
+
+  @include xs {
+    background-size: 336px 200px;
+   padding-bottom: 350px;
   }
 
   &-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
 
     @include lg {
       flex-direction: column;
     }
 
     &-wrapper {
+      max-width: 890px;
+      padding-right: 50px;
+
+      @include xl {
+        max-width: 750px;
+      }
 
       @include lg {
         align-self: flex-start;
+        max-width: 720px;
       }
 
       &-title {
@@ -51,7 +64,6 @@
         line-height: 115%;
         color: $primary-01;
         margin-bottom: 30px;
-        max-width: 890px;
 
         @media (max-width: 1500px) {
           font-size: 70px;
@@ -67,7 +79,6 @@
 
         @include lg {
           font-size: 58px;
-          max-width: 720px;
         }
 
         @include md {
@@ -83,7 +94,6 @@
         font-size: 32px;
         line-height: 115%;
         color: $neutral-02;
-        max-width: 890px;
 
         @media (max-width: 1500px) {
           font-size: 30px;
@@ -95,7 +105,6 @@
 
         @include xl {
           font-size: 28px;
-          max-width: 720px;
         }
 
         @include lg {
@@ -117,28 +126,84 @@
     }
 
     &-img-box {
-      max-width: 588px;
+      width: 588px;
       height: 588px;
 
-      @include lg {
-        max-width: 508px;
+      @include xxl {
+        width: 558px;
+        height: 558px;
+      }
+
+      @include xl {
+        width: 508px;
         height: 508px;
       }
 
+      @include lg {
+        width: 508px;
+        height: 508px;
+        position: absolute;
+        top: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       @include md {
-        max-width: 410px;
+        width: 410px;
         height: 410px;
       }
 
       @include sm {
-        max-width: 310px;
+        top: 300px;
+      }
+
+      @media (max-width: 415px) {
+        top: 350px;
+      }
+
+      @media (max-width: 355px) {
+        top: 380px;
+      }
+
+      @include xs {
+        top: 210px;
+        width: 310px;
         height: 310px;
       }
 
       &-img {
-        max-width: 100%;
-        height: auto;
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 588px;
+        height: 588px;
         animation: rotate-umbrella 5s linear infinite;
+
+        @include xxl {
+          right: 0;
+          width: 558px;
+          height: 558px;
+        }
+
+        @include xl {
+          width: 528px;
+          height: 528px;
+        }
+
+        @include lg {
+          width: 508px;
+          height: 508px;
+        }
+
+        @include md {
+          width: 410px;
+          height: 410px;
+        }
+
+        @include xs {
+          width: 310px;
+          height: 310px;
+        }
       }
     }
   }
