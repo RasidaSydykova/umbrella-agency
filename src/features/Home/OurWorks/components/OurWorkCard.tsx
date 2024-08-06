@@ -1,26 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+import { Portfolio } from '../../../../../types';
 import './OurWorkCard.scss';
 
 interface Props {
-  img: string;
-  link: string;
-  text: string;
-  boldText: string;
+  portfolio: Portfolio;
 }
 
-const OurWorkCard: React.FC<Props> = ({ img, link, text, boldText }) => {
+const OurWorkCard: React.FC<Props> = ({ portfolio }) => {
   return (
     <div className="our-works-card">
-      <Link href={link}>
-        <div className="our-works-card-img-box">
-          <img className="our-works-card-img-box-img" src={img} alt="Our work" />
-        </div>
-        <div className="our-works-card-information">
-          <p className="our-works-card-information-text">{text}</p>
-          <span className="our-works-card-information-bold-text">{boldText}</span>
-        </div>
-      </Link>
+      <div className="our-works-card-img-box">
+        <img className="our-works-card-img-box-img" src={portfolio.image} alt="Our work" />
+      </div>
+      <div className="our-works-card-information">
+        <p className="our-works-card-information-text">{portfolio.title}</p>
+        <span className="our-works-card-information-bold-text">{portfolio.price}</span>
+      </div>
     </div>
   );
 };

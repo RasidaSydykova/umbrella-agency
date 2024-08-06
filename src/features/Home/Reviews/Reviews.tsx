@@ -1,12 +1,22 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import ReviewCard from '@/features/Home/Reviews/components/ReviewCard/ReviewCard';
 import './Reviews.scss';
 import 'swiper/css';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { fetchReviews } from '@/features/Home/Reviews/reviewsThunk';
+import { selectReviews } from '@/features/Home/Reviews/reviewsSlice';
 
 const Reviews = () => {
+  const dispatch = useAppDispatch();
+  const reviews = useAppSelector(selectReviews);
+
+  useEffect(() => {
+    dispatch(fetchReviews());
+  }, [dispatch]);
+
   return (
     <section className="reviews container">
       <div className="wrapper">
@@ -48,21 +58,15 @@ const Reviews = () => {
             },
           }}
         >
-          {[...Array(6)].map((_, index) => (
-            // eslint-disable-next-line react/jsx-key
-            <SwiperSlide>
-              <ReviewCard
-                key={index}
-                img="/assets/home/review/review-img.jpg"
-                name="Елена Стрелецкая"
-                company="Исполнительный директор “Novotel”"
-                review="Lorem ipsum dolor sit amet consectetur. Risus semper nascetur morbi aenean
-                purus congue. Laoreet quam sed sit tempus in. Mauris amet mi sit in nisi pellentesque.
-                Fusce mauris habitant et imperdiet orci sit elit egestas dolor.Lorem ipsum dolor
-                sit amet consectetur. Risus semper nascetur morbi aenean purus congue. Laoreet quam sed sit
-                tempus in. Mauris amet mi sit in nisi pellentesque. "
-              />
-            </SwiperSlide>
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              img={review.avatar}
+              name={review.fullname}
+              company={review.company_name}
+              position={review.position}
+              review={review.description}
+            />
           ))}
         </Swiper>
       </div>

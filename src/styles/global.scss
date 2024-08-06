@@ -45,9 +45,6 @@ img {
 .container {
   max-width: 1520px;
   margin: 0 auto;
-  padding: 0 25px;
-
-  @include md {
-    padding: 0 10px;
-  }
+  padding: 0 10px;
+  border: 1px solid red;
 }

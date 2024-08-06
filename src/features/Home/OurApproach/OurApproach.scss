@@ -4,134 +4,151 @@
 .our-approach {
   margin: 100px auto 0 auto;
   max-width: 1700px;
-  background:
-    url('../../../../public/assets/home/our-approach/umbrella-big-icon.svg') left center no-repeat,
-    url('../../../../public/assets/home/our-approach/umrella.svg') right center no-repeat;
-  background-size:
-    671px 579px,
-    588px 588px;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  background: url('../../../../public/assets/home/our-approach/umbrella-big-icon.svg') left center
+    no-repeat;
+  background-size: 671px 579px;
+  border: 1px solid red;
 
   @media (max-width: 1500px) {
-    background-size:
-      571px 479px,
-      488px 488px;
+    background-size: 571px 479px;
   }
 
   @include xl {
-    background-size:
-      471px 379px,
-      388px 388px;
+    background-size: 471px 379px;
   }
 
   @include lg {
-    background-position:
-      top center,
-      bottom center;
-    padding-top: 50px;
-    padding-bottom: 450px;
+    background-position: top center;
+  }
+
+  @include md {
+    background-size: 371px 339px;
   }
 
   @include sm {
-    background-size:
-      336px 289px,
-      310px 311px;
-    background-position:
-      top center,
-      bottom center;
-    padding-top: 50px;
-    padding-bottom: 350px;
-  }
-
-  @include xs {
-    background-size:
-      336px 289px,
-      310px 311px;
-    background-position:
-      top center,
-      bottom center;
-    padding-top: 50px;
-    padding-bottom: 340px;
-  }
-
-  &-img-box {
-    max-width: 600px;
-    margin-left: -80px;
-    margin-right: 1200px;
-
-    &-img {
-      max-width: 100%;
-      height: auto;
-    }
+    background-size: 336px 289px;
   }
 
   &-content {
-    max-width: 890px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
 
-    &-title {
-      font-weight: 600;
-      font-size: 72px;
-      line-height: 115%;
-      color: $primary-01;
-      margin-bottom: 30px;
+    @include lg {
+      flex-direction: column;
+    }
 
-      @media (max-width: 1500px) {
-        font-size: 70px;
-      }
-
-      @include xxl {
-        font-size: 68px;
-      }
+    &-wrapper {
 
       @include lg {
-        font-size: 58px;
-        max-width: 740px;
+        align-self: flex-start;
       }
 
-      @include md {
-        font-size: 50px;
+      &-title {
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 115%;
+        color: $primary-01;
+        margin-bottom: 30px;
+        max-width: 890px;
+
+        @media (max-width: 1500px) {
+          font-size: 70px;
+        }
+
+        @include xxl {
+          font-size: 68px;
+        }
+
+        @include xl {
+          max-width: 740px;
+        }
+
+        @include lg {
+          font-size: 58px;
+          max-width: 720px;
+        }
+
+        @include md {
+          font-size: 50px;
+        }
+
+        @include sm {
+          font-size: 24px;
+        }
       }
 
-      @include sm {
-        font-size: 24px;
+      &-text {
+        font-size: 32px;
+        line-height: 115%;
+        color: $neutral-02;
+        max-width: 890px;
+
+        @media (max-width: 1500px) {
+          font-size: 30px;
+        }
+
+        @include xxl {
+          font-size: 28px;
+        }
+
+        @include xl {
+          font-size: 28px;
+          max-width: 720px;
+        }
+
+        @include lg {
+          font-size: 24px;
+        }
+
+        @include md {
+          font-size: 20px;
+        }
+
+        @include sm {
+          font-size: 18px;
+        }
+
+        @include xs {
+          font-size: 12px;
+        }
       }
     }
 
-    &-text {
-      font-size: 32px;
-      line-height: 115%;
-      color: $neutral-02;
-
-      @media (max-width: 1500px) {
-        font-size: 30px;
-      }
-
-      @include xxl {
-        font-size: 28px;
-        max-width: 750px;
-      }
-
-      @include xl {
-        font-size: 28px;
-        max-width: 700px;
-      }
+    &-img-box {
+      max-width: 588px;
+      height: 588px;
 
       @include lg {
-        font-size: 24px;
+        max-width: 508px;
+        height: 508px;
       }
 
       @include md {
-        font-size: 20px;
+        max-width: 410px;
+        height: 410px;
       }
 
       @include sm {
-        font-size: 18px;
+        max-width: 310px;
+        height: 310px;
       }
 
-      @include xs {
-        font-size: 12px;
+      &-img {
+        max-width: 100%;
+        height: auto;
+        animation: rotate-umbrella 5s linear infinite;
       }
     }
+  }
+}
+
+@keyframes rotate-umbrella {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

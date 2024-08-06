@@ -1,14 +1,16 @@
 import React from 'react';
 import './ReviewCard.scss';
+import { positions } from '@mui/system';
 
 interface Props {
   img: string;
   name: string;
   company: string;
+  position: string;
   review: string;
 }
 
-const ReviewCard: React.FC<Props> = ({ img, name, company, review }) => {
+const ReviewCard: React.FC<Props> = ({ img, name, company, position, review }) => {
   return (
     <div className="review-card">
       <div className="content-wrapper">
@@ -17,7 +19,10 @@ const ReviewCard: React.FC<Props> = ({ img, name, company, review }) => {
         </div>
         <div className="information">
           <span className="name">{name}</span>
-          <span className="company">{company}</span>
+          <p className="company">
+            <span>{company} </span>
+            {position}
+          </p>
         </div>
       </div>
       <p className="review">{review}</p>

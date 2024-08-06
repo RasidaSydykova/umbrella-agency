@@ -1,24 +1,28 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import OurWorkCard from '@/features/Home/OurWorks/components/OurWorkCard';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { selectPortfolios } from '@/features/Home/OurWorks/portfoliosSlice';
+import { fetchPortfolios } from '@/features/Home/OurWorks/portfoliosThunk';
 import './OurWorks.scss';
 import 'swiper/css';
 
 const OurWorks = () => {
+  const dispatch = useAppDispatch();
+  const portfolios = useAppSelector(selectPortfolios);
+
+  useEffect(() => {
+    dispatch(fetchPortfolios());
+  }, [dispatch]);
+
   return (
     <section className="our-works container">
       <h2 className="our-works-title">Наши работы</h2>
       <div className="our-works-cards-desktop">
-        {[...Array(6)].map((_, index) => (
-          <OurWorkCard
-            key={index}
-            link="/"
-            img="/assets/home/our-works/our-work-1.jpg"
-            text="SEO для Novotel. Рост поискового трафика"
-            boldText="с 6к до 1млн"
-          />
+        {portfolios.map((portfolio) => (
+          <OurWorkCard key={portfolio.id} portfolio={portfolio} />
         ))}
       </div>
       <div className="our-works-cards-mobile">
@@ -34,18 +38,11 @@ const OurWorks = () => {
           style={{ overflow: 'visible' }}
           className="mySwiper"
         >
-          {[...Array(6)].map((_, index) => (
-            // eslint-disable-next-line react/jsx-key
-            <SwiperSlide>
-              <OurWorkCard
-                key={index}
-                link="/"
-                img="/assets/home/our-works/our-work-1.jpg"
-                text="SEO для Novotel. Рост поискового трафика"
-                boldText="с 6к до 1млн"
-              />
-            </SwiperSlide>
-          ))}
+          <SwiperSlide>
+            {portfolios.map((portfolio) => (
+              <OurWorkCard key={portfolio.id} portfolio={portfolio} />
+            ))}
+          </SwiperSlide>
         </Swiper>
       </div>
     </section>

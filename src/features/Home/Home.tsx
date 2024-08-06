@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import Main from '@/features/Home/Main/Main';
 import AboutUs from '@/features/Home/AboutUs/AboutUs';
 import OurWorks from '@/features/Home/OurWorks/OurWorks';
@@ -9,6 +10,10 @@ import Footer from '@/UI/Footer/Footer';
 import './Home.scss';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Home';
+  }, []);
+
   return (
     <div className="home">
       <Main />

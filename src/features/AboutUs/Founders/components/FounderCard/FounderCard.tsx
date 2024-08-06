@@ -1,27 +1,28 @@
 import React from 'react';
 import './FounderCard.scss';
+import { Founder } from '../../../../../../types';
 
 interface Props {
-  img: string;
-  text: string;
-  name: string;
-  company: string;
+  founder: Founder;
 }
 
-const FounderCard: React.FC<Props> = ({ img, text, name, company }) => {
+const FounderCard: React.FC<Props> = ({ founder }) => {
   return (
     <div className="founder-card">
       <div className="founder-card-wrapper">
         <div className="founder-card-wrapper-img-box">
-          <img className="founder-card-wrapper-img-box-img" src={img} alt="Our work" />
+          <img className="founder-card-wrapper-img-box-img" src={founder.image} alt="Our work" />
         </div>
         <div className="founder-card-wrapper-information">
-          <p className="founder-card-wrapper-text">{text}</p>
+          <p className="founder-card-wrapper-text">{founder.quote}</p>
         </div>
       </div>
       <div className="founder-card-personal-information">
-        <p className="founder-card-personal-information-name">{name}</p>
-        <p className="founder-card-personal-information-company">{company}</p>
+        <p className="founder-card-personal-information-name">{founder.fullname}</p>
+        <p className="founder-card-personal-information-company">
+          <span>{founder.position} </span>
+          {founder.description}
+        </p>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import Main from '@/features/AboutUs/Main/Main';
 import Founders from '@/features/AboutUs/Founders/Founders';
 import OurMission from '@/features/AboutUs/OurMission/OurMission';
@@ -8,6 +9,10 @@ import Footer from '@/UI/Footer/Footer';
 import './AboutUsPage.scss';
 
 const AboutUsPage = () => {
+  useEffect(() => {
+    document.title = 'О нас';
+  }, []);
+
   return (
     <div className="about-us-page">
       <Main />

@@ -5,11 +5,16 @@ import NavList from '@/UI/Toolbar/components/NavList/NavList';
 import FormLink from '@/components/FormLink/FormLink';
 import '../Toolbar/Toolbar.scss';
 
-const Toolbar = () => {
+interface Props {
+  background: string;
+  color: string;
+}
+
+const Toolbar: React.FC<Props> = ({ background, color }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="header">
+    <header className="header" style={{ backgroundColor: `${background}`, color: `${color}` }}>
       <div className="content">
         <div className="container">
           <div className="header-wrapper">
