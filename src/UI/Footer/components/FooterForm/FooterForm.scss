@@ -2,24 +2,33 @@
 @use '../../../../styles/variables' as *;
 
 .footer-form {
+  width: 750px;
+
+  @include lg {
+    width: 100%;
+  }
+
   .form {
-    max-width: 750px;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    font-family: $font-family;
 
-    @include lg {
-      max-width: 100%;
+    .input-field {
+      position: relative;
     }
 
-    &-input {
-      max-width: 100%;
-      padding: 25px 10px;
+    .input-field input {
+      padding: 20px 10px;
+      height: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.18);
       font-size: 20px;
-      color: $primary-03;
+      background: $primary-10;
       border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-family: $font-family;
+      outline: none;
+      color: $primary-03;
+      transition: 0.2s;
+      width: 100%;
 
       @include md {
         font-size: 18px;
@@ -36,94 +45,160 @@
       }
     }
 
-    &-textarea {
-      font-family: $font-family;
-      resize: none;
-      height: 170px;
-    }
+      .input-field label {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        color: $primary-03;
+        font-size: 20px;
+        pointer-events: none;
+        transition: 0.2s;
 
-    &-warning {
-      color: $primary-10;
-      font-weight: 400;
-      font-size: 18px;
-      margin-top: -30px;
+        @include md {
+          top: 15px;
+          font-size: 18px;
+        }
 
-      @include lg {
-        text-align: center;
-        align-self: center;
-      }
+        @include sm {
+          font-size: 16px;
+        }
 
-      @include md {
-        font-size: 14px;
-      }
-
-      @include xs {
-        font-size: 12px;
-      }
-    }
-
-    &-button {
-      align-self: flex-start;
-      cursor: pointer;
-      font-size: 24px;
-      color: $primary-10;
-      background-color: $secondary-01;
-      border: none;
-      border-radius: 4px;
-      padding: 18px 24px;
-      display: flex;
-      align-items: center;
-      transition: background-color 1s;
-
-      &:hover {
-        background-color: lighten($secondary-03, 10%);
-
-        .form-button-arrow {
-          transform: rotate(45deg);
-          transition: transform 0.5s;
+        @include xs {
+          font-size: 14px;
         }
       }
 
-      @include lg {
-        align-self: center;
-        font-size: 22px;
-        padding: 18px 24px;
-        margin-top: -25px;
-      }
-
-      @include md {
-        padding: 15px 20px;
-        font-size: 20px;
-      }
-
-      @include xs {
-        padding: 10px 14px;
+      .input-field input:focus ~ label,
+      .input-field input:valid ~ label {
+        top: -25px;
+        left: 0;
+        color: $primary-10;
         font-size: 16px;
       }
 
-      @include xs {
-        font-size: 14px;
+      .input-field input:focus {
+        border-color: $secondary-01;
+        background-color: $primary-10;
       }
 
-      &-arrow {
-        display: block;
-        width: 28px;
-        height: 28px;
+      textarea {
+        font-size: 20px;
+        font-family: $font-family;
+        border-radius: 4px;
+        outline: 2px solid rgba(255, 255, 255, 0.18);
+        resize: none;
+        height: 170px;
+        width: 100%;
 
-        @include xxl {
-          width: 24px;
-          height: 24px;
+        @include md {
+          font-size: 18px;
         }
 
-        @include xl {
-          width: 20px;
-          height: 20px;
+        @include sm {
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+
+      .input-field textarea:focus ~ label,
+      .input-field textarea:valid ~ label {
+        top: -25px;
+        left: 0;
+        color: $primary-10;
+        font-size: 16px;
+      }
+
+      .input-field textarea:focus {
+        outline-color: $secondary-01;
+        background-color: $primary-10;
+      }
+
+      &-warning {
+        color: $primary-10;
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: -30px;
+
+        @include lg {
+          text-align: center;
+          align-self: center;
         }
 
         @include md {
-          display: none;
+          font-size: 14px;
+        }
+
+        @include xs {
+          font-size: 12px;
+        }
+      }
+
+      &-button {
+        align-self: flex-start;
+        cursor: pointer;
+        font-size: 24px;
+        color: $primary-10;
+        background-color: $secondary-01;
+        border: none;
+        border-radius: 4px;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        transition: background-color 1s;
+
+        &:hover {
+          background-color: lighten($secondary-03, 10%);
+
+          .form-button-arrow {
+            transform: rotate(45deg);
+            transition: transform 0.5s;
+          }
+        }
+
+        @include lg {
+          align-self: center;
+          font-size: 22px;
+          padding: 18px 24px;
+          margin-top: -25px;
+        }
+
+        @include md {
+          padding: 15px 20px;
+          font-size: 20px;
+        }
+
+        @include xs {
+          padding: 10px 14px;
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+
+        &-arrow {
+          display: block;
+          width: 28px;
+          height: 28px;
+
+          @include xxl {
+            width: 24px;
+            height: 24px;
+          }
+
+          @include xl {
+            width: 20px;
+            height: 20px;
+          }
+
+          @include md {
+            display: none;
+          }
         }
       }
     }
   }
-}
+

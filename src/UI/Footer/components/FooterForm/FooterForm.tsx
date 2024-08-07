@@ -5,42 +5,26 @@ const FooterForm = () => {
   return (
     <div className="footer-form">
       <form className="form">
-        <input
-          className="form-input"
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Ваше имя"
-          // value={state.name}
-          // onChange={inputChange}
-        />
+        <div className="input-field">
+          <input type="text" name="name" id="name" required />
+          <label htmlFor="name">Ваше имя</label>
+        </div>
 
-        <input
-          className="form-input"
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Ваш номер телефона или E-mail"
-          // value={state.phone}
-          // onChange={inputChange}
-        />
-        <input
-          className="form-input"
-          type="text"
-          name="service"
-          id="service"
-          placeholder="Какая услуга вас интересует?  (Можно выбрать несколько)"
-          // value={state.service}
-          // onChange={inputChange}
-        />
-        <textarea
-          className="form-input form-textarea"
-          id="comment"
-          name="comment"
-          placeholder="Оставьте комментарий или задайте вопрос"
-          // value={state.comment}
-          // onChange={inputChange}
-        />
+        <div className="input-field">
+          <input type="tel" name="phone" id="phone" required />
+          <label htmlFor="phone">Ваш номер телефона или E-mail</label>
+        </div>
+
+        <div className="input-field">
+          <input type="text" name="service" id="service" required />
+          <label htmlFor="service">Какая услуга вас интересует? (Можно выбрать несколько)</label>
+        </div>
+
+        <div className="input-field">
+          <textarea name="comment" id="comment" required />
+          <label htmlFor="service">Оставьте комментарий или задайте вопрос</label>
+        </div>
+
         <p className="form-warning">Оставляя заявку вы соглашаетесь на обработку ваших данных</p>
         <button className="form-button" type="submit">
           Отправить
