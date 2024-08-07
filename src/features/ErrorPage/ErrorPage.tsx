@@ -11,7 +11,7 @@ interface Props {
 const ErrorPage: React.FC<Props> = ({ error, title, subTitle }) => {
   useEffect(() => {
     document.title = `${error}`;
-  }, []);
+  }, [error]);
 
   return (
     <section className="notFoundPage">

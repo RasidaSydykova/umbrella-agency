@@ -47,8 +47,8 @@ const OurWorks = () => {
           }}
         >
           {portfolios.map((portfolio) => (
-            <SwiperSlide>
-              <OurWorkCard key={portfolio.id} portfolio={portfolio} />
+            <SwiperSlide key={portfolio.id}>
+              <OurWorkCard portfolio={portfolio} />
             </SwiperSlide>
           ))}
         </Swiper>

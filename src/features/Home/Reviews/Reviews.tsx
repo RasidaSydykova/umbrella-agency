@@ -59,9 +59,8 @@ const Reviews = () => {
           }}
         >
           {reviews.map((review) => (
-            <SwiperSlide>
+            <SwiperSlide key={review.id}>
               <ReviewCard
-                key={review.id}
                 img={review.avatar}
                 name={review.fullname}
                 company={review.company_name}
