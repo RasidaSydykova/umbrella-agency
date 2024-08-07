@@ -46,6 +46,10 @@
     flex-wrap: wrap;
     gap: 20px;
 
+    @include lg {
+      justify-content: center;
+    }
+
     @include sm {
       display: none;
     }

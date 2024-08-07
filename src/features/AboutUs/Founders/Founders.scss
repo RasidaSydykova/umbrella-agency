@@ -68,16 +68,16 @@
 
 .mySwiper {
   @include xl {
-    width: 85%;
+    width: 100%;
   }
 
-  @include lg {
-    width: 50%;
-  }
-
-  @include sm {
-    width: 90%;
-  }
+  //@include lg {
+  //  width: 50%;
+  //}
+  //
+  //@include sm {
+  //  width: 90%;
+  //}
 
   .swiper-slide {
     transition: transform 0.3s ease-in-out;

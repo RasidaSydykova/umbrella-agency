@@ -24,6 +24,13 @@ export interface Founder {
   description: string;
 }
 
+export interface Vacancy {
+  id: number;
+  title: string;
+  description: string;
+  url: string;
+}
+
 export interface Service {
   id: number;
   title: string;
@@ -33,4 +40,43 @@ export interface Service {
       title: string;
     },
   ];
+}
+
+interface Section {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface IProcess {
+  id: number;
+  description: string;
+}
+
+interface Portfolio {
+  id: number;
+  img: string | null;
+  title: string;
+}
+
+interface TeamMember {
+  id: number;
+  position: string;
+}
+
+interface Tab {
+  id: number;
+  title: string;
+  sections: Section[];
+  processes: Process[];
+  portfolios: Portfolio[];
+  team: TeamMember[];
+}
+
+interface ServicePage {
+  id: number;
+  title: string;
+  gif: string;
+  short_description_for_banner: string;
+  tabs: Tab[];
 }

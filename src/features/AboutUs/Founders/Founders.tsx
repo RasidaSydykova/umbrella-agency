@@ -17,8 +17,6 @@ const Founders = () => {
     dispatch(fetchFounders());
   }, [dispatch]);
 
-  console.log(founders);
-
   return (
     <section className="founders container">
       <h2 className="founders-title">Основатели</h2>
@@ -46,22 +44,28 @@ const Founders = () => {
             320: {
               slidesPerView: 1,
             },
-            576: {
-              slidesPerView: 1,
+            375: {
+              slidesPerView: 1.3,
             },
-            768: {
-              slidesPerView: 1,
+            430: {
+              slidesPerView: 1.6,
+            },
+            576: {
+              slidesPerView: 2,
+            },
+            820: {
+              slidesPerView: 2.5,
             },
             993: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
           }}
         >
-          <SwiperSlide>
-            {founders.map((founder) => (
-              <FounderCard key={founder.id} founder={founder} />
-            ))}
-          </SwiperSlide>
+          {founders.map((founder) => (
+            <SwiperSlide key={founder.id}>
+              <FounderCard founder={founder} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

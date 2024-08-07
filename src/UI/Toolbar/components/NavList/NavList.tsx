@@ -3,7 +3,11 @@ import Link from 'next/link';
 import DropdownList from '@/UI/Toolbar/components/Dropdown/DropdownList';
 import './NavList.scss';
 
-const NavList = () => {
+interface Props {
+  isMobile?: boolean;
+}
+
+const NavList: React.FC<Props> = ({ isMobile }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -32,15 +36,29 @@ const NavList = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           Услуги
-          <img
-            className="arrow"
-            src={isHovered ? '/assets/arrow-green.svg' : '/assets/arrow.svg'}
-            alt="umbrella"
-            style={{
-              transform: open ? 'rotate(-90deg)' : 'rotate(0deg)',
-              transition: 'transform 0.5s ease',
-            }}
-          />
+          {isMobile ? (
+            ''
+          ) : (
+            <img
+              className="arrow"
+              src={isHovered ? '/assets/arrow-green.svg' : '/assets/arrow.svg'}
+              alt="umbrella"
+              style={{
+                transform: open ? 'rotate(-90deg)' : 'rotate(0deg)',
+                transition: 'transform 0.5s ease',
+              }}
+            />
+          )}
+          {isMobile && (
+            <img
+              className="arrow"
+              src={isHovered ? '/assets/arrow-right-green.svg' : '/assets/arrow-right.svg'}
+              alt="umbrella"
+              style={{
+                transition: 'transform 0.5s ease',
+              }}
+            />
+          )}
           {open && (
             <div className={open ? 'dropdown active' : 'dropdown'}>
               <h6 className="dropdown-title">{dropdownData[0].title}</h6>

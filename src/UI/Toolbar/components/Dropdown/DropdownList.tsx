@@ -12,7 +12,7 @@ const DropdownList: React.FC<Props> = ({ list }) => {
       <ul className="dropdown-lists-list">
         {list.map((item, index) => (
           <li key={index} className="dropdown-lists-list-item">
-            <Link href="/service/1">{list}</Link>
+            <Link href="/service">{list}</Link>
           </li>
         ))}
       </ul>

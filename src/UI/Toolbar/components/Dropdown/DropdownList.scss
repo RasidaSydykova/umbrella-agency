@@ -4,6 +4,10 @@
 .dropdown-lists {
   max-width: 32%;
 
+  @include lg {
+   max-width: 100%;
+  }
+
   &-list {
     list-style: none;
     display: flex;
@@ -17,6 +21,14 @@
 
       &:hover {
         color: $secondary-03;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
+
+      @include sm {
+        font-size: 14px;
       }
     }
   }

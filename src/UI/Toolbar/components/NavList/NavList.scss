@@ -43,13 +43,39 @@
         animation-name: dropdown-animation;
         animation-duration: 1s;
 
+        @include lg {
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+
         &-title {
           font-weight: 600;
           font-size: 32px;
+
+          @include xl {
+            font-size: 30px;
+          }
+
+          @include lg {
+            font-size: 28px;
+            margin-top: 50px;
+          }
+
+          @include md {
+            font-size: 24px;
+          }
+
+          @include sm {
+            font-size: 18px;
+          }
+
+          @include xs {
+            font-size: 14px;
+          }
         }
       }
     }
-
 
     .service {
       display: flex;
@@ -72,9 +98,9 @@
   0% {
     transition: 1s;
     transform-origin: top;
-    transform: scaleY(0) translateY(-60%);
+    transform: translateY(-60%);
   }
   100% {
-    transform: scaleY(1) translateY(0%);
+    transform: translateY(0%);
   }
 }

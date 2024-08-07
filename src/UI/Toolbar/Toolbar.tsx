@@ -58,7 +58,7 @@ const Toolbar = () => {
                   </Link>
                 </div>
                 <div className="header-wrapper-mobile-menu-nav">
-                  <NavList />
+                  <NavList isMobile={true} />
                   <FormLink />
                 </div>
               </div>

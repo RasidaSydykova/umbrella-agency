@@ -59,14 +59,16 @@ const Reviews = () => {
           }}
         >
           {reviews.map((review) => (
-            <ReviewCard
-              key={review.id}
-              img={review.avatar}
-              name={review.fullname}
-              company={review.company_name}
-              position={review.position}
-              review={review.description}
-            />
+            <SwiperSlide>
+              <ReviewCard
+                key={review.id}
+                img={review.avatar}
+                name={review.fullname}
+                company={review.company_name}
+                position={review.position}
+                review={review.description}
+              />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>

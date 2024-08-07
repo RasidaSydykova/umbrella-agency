@@ -27,7 +27,7 @@ const OurWorks = () => {
       </div>
       <div className="our-works-cards-mobile">
         <Swiper
-          slidesPerView={1}
+          slidesPerView={1.5}
           spaceBetween={0}
           pagination={false}
           navigation={{
@@ -37,12 +37,20 @@ const OurWorks = () => {
           modules={[Pagination, Navigation]}
           style={{ overflow: 'visible' }}
           className="mySwiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            375: {
+              slidesPerView: 1.5,
+            },
+          }}
         >
-          <SwiperSlide>
-            {portfolios.map((portfolio) => (
+          {portfolios.map((portfolio) => (
+            <SwiperSlide>
               <OurWorkCard key={portfolio.id} portfolio={portfolio} />
-            ))}
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

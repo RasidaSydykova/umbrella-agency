@@ -3,11 +3,20 @@ import React from 'react';
 import './ServiceTabs.scss';
 import { Box, Tab, Tabs } from '@mui/material';
 import CustomTabPanel from '@/features/Service/ServiceTabs/components/CustomTabPanel/CustomTabPanel';
-import Process from '@/features/Service/ServiceTabs/components/Process/Process';
+
 import Team from '@/features/Service/ServiceTabs/components/Team/Team';
 import WorkStartSteps from '@/features/Service/ServiceTabs/components/WorkStartSteps/WorkStartSteps';
+import { IProcess, Portfolio, Section, TeamMember } from '../../../../types';
+import Process from '@/features/Service/ServiceTabs/components/Process/Process';
 
-const ServiceTabs = () => {
+interface Props {
+  title: string;
+  sections?: Section[];
+  processes?: IProcess[];
+  team?: TeamMember[];
+}
+
+const ServiceTabs: React.FC<Props> = ({ title, processes, team, sections }) => {
   const [value, setValue] = React.useState<number>(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -52,7 +61,7 @@ const ServiceTabs = () => {
               </h3>
               <p className="service-tabs-content-info-text">
                 Наши эксперты учитывают рыночные тенденции и используют передовые инструменты для
-                оптимизации, обеспечивая максимальную отдачу от ваших рекламных инвестиций.
+                оптимизации, обеспечивая максимальную отдачу от ваших рекламных инвестиций
               </p>
             </div>
             <div>

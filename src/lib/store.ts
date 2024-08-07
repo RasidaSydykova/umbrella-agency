@@ -2,6 +2,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import { reviewsReducer } from '@/features/Home/Reviews/reviewsSlice';
 import { portfoliosReducer } from '@/features/Home/OurWorks/portfoliosSlice';
 import { foundersReducer } from '@/features/AboutUs/Founders/foundersSlice';
+import { vacanciesReducer } from '@/features/AboutUs/Vacancies/vacanciesSlice';
+import { servicesReducer } from '@/features/Home/Services/servicesSlice';
+import { servicePageReducer } from '@/features/Service/serviceSlice';
 
 export const makeStore = () => {
   return configureStore({
@@ -9,6 +12,9 @@ export const makeStore = () => {
       reviews: reviewsReducer,
       portfolios: portfoliosReducer,
       founders: foundersReducer,
+      vacancies: vacanciesReducer,
+      services: servicesReducer,
+      servicePage: servicePageReducer,
     },
   });
 };
