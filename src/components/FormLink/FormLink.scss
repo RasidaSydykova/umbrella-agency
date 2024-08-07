@@ -16,6 +16,7 @@
     flex-direction: row;
     align-items: center;
     align-self: flex-start;
+    transition: background-color 1s;
 
     @include xxl {
       padding: 15px 20px;
@@ -40,6 +41,15 @@
     @include sm {
       padding: 10px 14px;
       font-size: 14px;
+    }
+
+    &:hover {
+      background-color: lighten($secondary-03, 10%);
+
+      .form-link-btn-arrow {
+        transform: rotate(45deg);
+        transition: transform 0.5s;
+      }
     }
 
     &-arrow {

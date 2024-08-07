@@ -10,11 +10,12 @@ const Services = () => {
         <div className="services-content-lists">
           {[...Array(6)].map((_, index) => (
             <ServiceList key={index} />
-          ))}
-        </div>
+        ))}
       </div>
-    </section>
-  );
+    </div>
+</section>
+)
+  ;
 };
 
 export default Services;

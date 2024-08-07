@@ -5,10 +5,17 @@
   @include lg {
     margin-top: 20px;
   }
+
   &-link {
     font-size: 24px;
     display: block;
     padding: 10px 0 5px 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.02;
+    }
 
     @include xl {
       font-size: 22px;

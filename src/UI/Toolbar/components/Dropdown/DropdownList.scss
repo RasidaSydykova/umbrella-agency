@@ -12,6 +12,12 @@
 
     &-item {
       font-size: 22px;
+      padding: 10px 0;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $secondary-03;
+      }
     }
   }
 }

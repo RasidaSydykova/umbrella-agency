@@ -35,7 +35,9 @@
       line-height: 115%;
       margin-bottom: 30px;
       border-bottom: 2px solid rgba(241, 242, 248, 0.5);
-      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      align-content: center;
 
       @include xl {
         font-size: 44px;
@@ -58,41 +60,74 @@
       &-arrow {
         width: 40px;
         height: 55px;
+
+        @include xl {
+          width: 35px;
+          height: 45px;
+        }
+
+        @include lg {
+          width: 30px;
+          height: 35px;
+        }
+
+        @include md {
+          width: 25px;
+          height: 30px;
+        }
+
+        @include sm {
+          width: 20px;
+          height: 25px;
+        }
+
+        @include xs {
+          width: 18px;
+          height: 19px;
+        }
       }
     }
 
     &-item {
-      padding: 15px 0 15px 50px;
-      position: relative;
+      padding: 15px 20px 0 0;
 
-      @include sm {
-        padding-left: 35px;
+      &:hover .services-list-content-item-link:hover {
+        color: $primary-04;
+
+        .services-list-content-item-link-img {
+          transform: rotate(-360deg);
+          transition: transform 1.5s;
+        }
       }
 
-      &::before {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        top: 15px;
-        bottom: 15px;
-        left: 0;
-        background: url('../../../../../../public/assets/umbrella.svg') center no-repeat;
-        background-size: 36px 43px;
-        width: 36px;
-        height: 43px;
+      &-link {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
 
-        @include md {
-          background-size: 32px 38px;
-          top: 10px;
-          width: 32px;
-          height: 38px;
-        }
 
         @include sm {
-          background-size: 24px 28px;
-          top: 10px;
-          width: 24px;
-          height: 28px;
+          gap: 10px;
+        }
+
+        //&:first-child {
+        //  color: $secondary-03;
+        //}
+
+        &-img {
+          max-width: 36px;
+          height: 43px;
+
+          @include sm {
+            max-width: 26px;
+            height: 33px;
+          }
+
+          @include xs {
+            max-width: 24px;
+            height: 28px;
+          }
         }
       }
     }

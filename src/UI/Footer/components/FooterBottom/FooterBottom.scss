@@ -63,6 +63,14 @@
         @include xs {
           font-size: 14px;
         }
+
+        &-list {
+          transition: color 0.5s;
+
+          &:hover {
+            color: $secondary-03;
+          }
+        }
       }
     }
 
@@ -79,6 +87,11 @@
       .link {
         display: block;
         padding: 30px;
+        transition: all 0.4s ease;
+
+        &:hover {
+          scale: 1.05;
+        }
       }
 
       .whatsapp {
