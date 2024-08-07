@@ -49,9 +49,33 @@ img {
   padding: 0 10px;
 }
 
+.css-heg063-MuiTabs-flexContainer {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+
+  @include md {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+  }
+}
+
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
   white-space: nowrap !important;
-  max-width: 400px !important;
+  text-transform: capitalize !important;
+  font-size: 24px !important;
+  max-width: 100% !important;
+
+  @include xxl {
+    font-size: 22px !important;
+  }
+
+  @include md {
+    font-size: 20px !important;
+  }
+
+  @include xs {
+    font-size: 14px !important;
+  }
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
