@@ -21,11 +21,10 @@ const Services = () => {
           {services.map((service) => (
             <ServiceList key={service.id} service={service} />
           ))}
+        </div>
       </div>
-    </div>
-</section>
-)
-  ;
+    </section>
+  );
 };
 
 export default Services;

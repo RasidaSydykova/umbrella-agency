@@ -43,7 +43,9 @@ const AboutUs = () => {
           Подробнее о компании
           <img
             className="about-us-link-arrow"
-            src={isHovered ? "/assets/umbrella-arrow-green.svg" : "/assets/umbrella-arrow-neutral.svg"}
+            src={
+              isHovered ? '/assets/umbrella-arrow-green.svg' : '/assets/umbrella-arrow-neutral.svg'
+            }
             alt="umbrella"
             style={{
               transition: 'transform 0.5s ease',

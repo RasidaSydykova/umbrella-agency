@@ -5,10 +5,10 @@ import './ServiceList.scss';
 import { Service } from '../../../../../../types';
 
 interface Props {
- service: Service;
+  service: Service;
 }
 
-const ServiceList: React.FC<Props> = ({service}) => {
+const ServiceList: React.FC<Props> = ({ service }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

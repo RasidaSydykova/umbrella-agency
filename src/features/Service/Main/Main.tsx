@@ -7,7 +7,7 @@ interface Props {
   gif?: string;
 }
 
-const Main: React.FC<Props> = ({title, short_description_for_banner, gif}) => {
+const Main: React.FC<Props> = ({ title, short_description_for_banner, gif }) => {
   const bannerMainImg = `url("/assets/service/service-banner.jpg")`;
 
   return (
@@ -26,11 +26,7 @@ const Main: React.FC<Props> = ({title, short_description_for_banner, gif}) => {
             </div>
 
             <div className="service-main-wrapper-inner-img-box">
-              <img
-                className="service-main-wrapper-inner-img-box-img"
-                src={gif}
-                alt="Target"
-              />
+              <img className="service-main-wrapper-inner-img-box-img" src={gif} alt="Target" />
             </div>
           </div>
         </div>
