@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Accordion from '@/features/Service/ServiceTabs/components/Process/components/Accordion/Accordion';
 import './Process.scss';
 
-const Process = () => {
+const Process = ({ processes }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleAccordionClick = (index: number) => {
@@ -38,12 +38,12 @@ const Process = () => {
           </p>
         </div>
         <div className="process-steps">
-          {accordionsData.map((accordion, i) => (
+          {processes?.map((accordion, i) => (
             <Accordion
               key={i}
-              index={accordion.index}
-              title={accordion.title}
-              list={accordion.list}
+              index={accordion.id}
+              title={'Lorem ipsum dolor sit amet consectetur'}
+              list={[accordion.description]}
               isOpen={openIndex === i}
               onClick={() => handleAccordionClick(i)}
             />

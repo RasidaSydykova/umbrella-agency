@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import FooterTop from '@/UI/Footer/components/FooterTop/FooterTop';
 import FooterBottom from '@/UI/Footer/components/FooterBottom/FooterBottom';

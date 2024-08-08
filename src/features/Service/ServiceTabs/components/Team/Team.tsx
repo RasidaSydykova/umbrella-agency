@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.scss';
 
-const Team = () => {
+const Team = ({ team }) => {
   return (
     <section className="team container">
       <div className="team-text">
@@ -9,12 +9,7 @@ const Team = () => {
       </div>
       <div className="team-specialists">
         <div className="specialists">
-          <span className="specialist">Копирайтер</span>
-          <span className="specialist">Маркетолог</span>
-        </div>
-        <div className="specialists">
-          <span className="specialist">Дизайнер</span>
-          <span className="specialist">Таргетолог</span>
+          {team.map((item: {id: number; position: string}) => <span className="specialist" key={item.id}>{item.position}</span>)}
         </div>
       </div>
     </section>

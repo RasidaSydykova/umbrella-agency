@@ -10,13 +10,21 @@ import { IProcess, Portfolio, Section, TeamMember } from '../../../../types';
 import Process from '@/features/Service/ServiceTabs/components/Process/Process';
 
 interface Props {
-  title: string;
-  sections?: Section[];
-  processes?: IProcess[];
-  team?: TeamMember[];
+  tabs: {
+    id: number;
+    portfolios: {
+      id: number;
+      img: string | null;
+      title: string
+    }[]
+    title: string;
+    sections?: Section[];
+    processes?: IProcess[];
+    team?: TeamMember[];
+  }[]
 }
 
-const ServiceTabs: React.FC<Props> = ({ title, processes, team, sections }) => {
+const ServiceTabs: React.FC<Props> = ({ tabs }) => {
   const [value, setValue] = React.useState<number>(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -43,30 +51,31 @@ const ServiceTabs: React.FC<Props> = ({ title, processes, team, sections }) => {
                 scrollButtons="auto"
                 allowScrollButtonsMobile={false}
               >
-                <Tab label="Контекстная реклама" {...a11yProps(0)} />
-                <Tab label="Разработка digital-стратегии" {...a11yProps(1)} />
-                <Tab label="Разработка digital-стратегии" {...a11yProps(2)} />
-                <Tab label="Разработка digital-стратегии" {...a11yProps(3)} />
-                <Tab label="Разработка digital-стратегии" {...a11yProps(4)} />
+                {tabs?.map((tab, index) => {
+                  return <Tab label={tab.title} {...a11yProps(index)}/>
+                })}
               </Tabs>
             </Box>
           </div>
         </div>
 
-        {[...Array(6)].map((_, index) => (
+        {tabs?.map((data, index) => (
           <CustomTabPanel key={index} value={value} index={index}>
-            <div className="service-tabs-content-info container">
-              <h3 className="service-tabs-content-info-title">
-                Настройка и ведение контекстной рекламы
-              </h3>
-              <p className="service-tabs-content-info-text">
-                Наши эксперты учитывают рыночные тенденции и используют передовые инструменты для
-                оптимизации, обеспечивая максимальную отдачу от ваших рекламных инвестиций
-              </p>
-            </div>
+            {data.sections?.map((section) => {
+              return (
+                <div className="service-tabs-content-info container" key={section.id}>
+                  <h3 className="service-tabs-content-info-title">
+                    {section?.title}
+                  </h3>
+                  <p className="service-tabs-content-info-text">
+                    {section?.description}
+                  </p>
+                </div>
+              )
+            })}
             <div>
-              <Process />
-              <Team />
+              <Process processes={data.processes}/>
+              <Team team={data.team}/>
               <WorkStartSteps />
             </div>
           </CustomTabPanel>

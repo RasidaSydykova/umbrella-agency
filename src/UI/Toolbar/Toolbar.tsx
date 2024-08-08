@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import NavList from '@/UI/Toolbar/components/NavList/NavList';
 import FormLink from '@/components/FormLink/FormLink';
@@ -7,6 +7,10 @@ import '../Toolbar/Toolbar.scss';
 
 const Toolbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setOpen(!open)
+  }, [location.pathname])
 
   return (
     <header className="header">

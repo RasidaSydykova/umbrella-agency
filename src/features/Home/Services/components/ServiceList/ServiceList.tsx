@@ -29,7 +29,7 @@ const ServiceList: React.FC<Props> = ({ service }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <Link href="/service" className="services-list-content-item-link">
+            <Link href={"/service/" + service.id} className="services-list-content-item-link">
               <img
                 className="services-list-content-item-link-img"
                 src={isHovered ? '/assets/umbrella-primary.svg' : '/assets/umbrella.svg'}
