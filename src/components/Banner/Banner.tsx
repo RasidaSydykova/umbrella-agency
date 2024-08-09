@@ -16,6 +16,7 @@ const Banner: React.FC<Props> = ({ src, title, subTitle }) => {
       style={{
         backgroundImage: bannerLink,
         backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       }}
     >
       <div className="banner-wrapper container">

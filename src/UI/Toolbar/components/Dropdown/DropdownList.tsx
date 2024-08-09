@@ -4,7 +4,7 @@ import './DropdownList.scss';
 
 interface Props {
   list: string[];
-  id: number
+  id: number;
 }
 
 const DropdownList: React.FC<Props> = ({ list, id }) => {
@@ -13,7 +13,7 @@ const DropdownList: React.FC<Props> = ({ list, id }) => {
       <ul className="dropdown-lists-list">
         {list.map((item, index) => (
           <li key={index} className="dropdown-lists-list-item">
-            <Link href={"/service/" + id}>{item}</Link>
+            {item}
           </li>
         ))}
       </ul>

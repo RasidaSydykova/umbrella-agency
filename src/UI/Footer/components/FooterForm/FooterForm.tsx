@@ -15,10 +15,10 @@ const FooterForm = () => {
 
   const getOptions = async () => {
     const { data } = await axios.get('http://34.176.229.246/api/v1/service/get/')
-    setOptions(data.map((service) => {return({value:service.title, label:service.title})}))
+    setOptions(data.map((service: any) => {return({value:service.title, label:service.title})}))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     try {
       e.preventDefault()
       axios.post('http://34.176.229.246/api/v1/form/create/', formData)
@@ -32,7 +32,7 @@ const FooterForm = () => {
       console.error(error)
     }
   }
-  const handleChange = (type, value) => {
+  const handleChange = (type: any, value: any) => {
     setFormData((prev) => {
       return {
         ...prev,

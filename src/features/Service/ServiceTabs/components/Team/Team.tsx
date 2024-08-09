@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import './Team.scss';
 
-const Team = ({ team }) => {
+const Team: FC<any> = ({ team }) => {
   return (
     <section className="team container">
       <div className="team-text">

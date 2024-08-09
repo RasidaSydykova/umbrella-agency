@@ -1,40 +1,13 @@
-import React from 'react';
+import { FC } from 'react';
 import WorkStartCard from '@/features/Service/ServiceTabs/components/WorkStartSteps/components/WorkStartCard/WorkStartCard';
 import './WorkStartSteps.scss';
 
-const WorkStartSteps = ({ steps }) => {
-  const cardsData = [
-    {
-      index: 1,
-      title: 'Lorem ipsum dolor sit amet consectetur',
-      text:
-        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
-        'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
-        'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
-    },
-    {
-      index: 2,
-      title: 'Lorem ipsum dolor sit amet consectetur',
-      text:
-        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
-        'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
-        'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
-    },
-    {
-      index: 3,
-      title: 'Lorem ipsum dolor sit amet consectetur',
-      text:
-        'Lorem ipsum dolor sit amet consectetur. Dignissim nulla pulvinar adipiscing tellus ' +
-        'volutpat magna et id enim. Nibh nunc eleifend non cursus duis. Cursus semper eget ut vel ' +
-        'suspendisse libero adipiscing. Sem vulputate netus consectetur morbi ultrices. ',
-    },
-  ];
-
+const WorkStartSteps: FC<any> = ({ steps }) => {
   return (
     <section className="work-start-steps container">
       <h4 className="work-start-steps-title">До начала работы:</h4>
       <div className="work-start-steps-cards">
-        {steps.map((card, i) => (
+        {steps.map((card: any, i: any) => (
           <WorkStartCard key={i} index={i + 1} title={card.title} text={card.description} />
         ))}
       </div>

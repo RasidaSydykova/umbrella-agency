@@ -1,9 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Accordion from '@/features/Service/ServiceTabs/components/Process/components/Accordion/Accordion';
 import './Process.scss';
 
-const Process = ({ processes }) => {
+const Process: FC<any> = ({ processes }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleAccordionClick = (index: number) => {
@@ -21,7 +21,7 @@ const Process = ({ processes }) => {
           </p>
         </div>
         <div className="process-steps">
-          {processes?.map((accordion, i) => (
+          {processes?.map((accordion: any, i: any) => (
             <Accordion
               key={i}
               index={accordion.id}

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import DropdownList from '@/UI/Toolbar/components/Dropdown/DropdownList';
@@ -6,7 +6,8 @@ import './NavList.scss';
 import { useDispatch } from 'react-redux';
 import { fetchServices } from '@/features/Home/Services/servicesThunk';
 import { selectServices } from '@/features/Home/Services/servicesSlice';
-import { useAppSelector } from '@/lib/hooks';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   isMobile?: boolean;
@@ -15,16 +16,27 @@ interface Props {
 const NavList: React.FC<Props> = ({ isMobile }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch();
   const services = useAppSelector(selectServices);
+  const pathname = usePathname();
 
   useEffect(() => {
-    dispatch(fetchServices())
-  }, [])
+    setOpen(false);
+  }, [pathname]);
 
-  const dropdownData = services.map((service) => {return {
-    title: service.title, list: service.category?.map((tab) => {return tab.title}), id: service.id
-  }})
+  useEffect(() => {
+    dispatch(fetchServices());
+  }, []);
+
+  const dropdownData = services.map((service) => {
+    return {
+      title: service.title,
+      list: service.category?.map((tab) => {
+        return tab.title;
+      }),
+      id: service.id,
+    };
+  });
 
   const handleItemClick = () => {
     setOpen(false);
@@ -66,9 +78,13 @@ const NavList: React.FC<Props> = ({ isMobile }) => {
           )}
           {open && (
             <div className={open ? 'dropdown active' : 'dropdown'}>
-              <h6 className="dropdown-title">{dropdownData[0]?.title}</h6>
               {dropdownData.map((item, index) => (
-                <DropdownList key={index} list={item.list} id={item.id}/>
+                <div className="dropdown-section">
+                  <Link href={'/service/' + item.id}>
+                    <h6 className="dropdown-title">{item?.title}</h6>
+                  </Link>
+                  <DropdownList key={index} list={item.list} id={item.id} />
+                </div>
               ))}
             </div>
           )}

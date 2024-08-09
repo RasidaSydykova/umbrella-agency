@@ -9,7 +9,7 @@ interface Props {
 }
 
 const ServiceList: React.FC<Props> = ({ service }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(-1);
 
   return (
     <div className="services-list">
@@ -26,13 +26,17 @@ const ServiceList: React.FC<Props> = ({ service }) => {
           <li
             className="services-list-content-item"
             key={category.id}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsHovered(category.id)}
+            onMouseLeave={() => setIsHovered(-1)}
           >
-            <Link href={"/service/" + service.id} className="services-list-content-item-link">
+            <Link href={'/service/' + service.id} className="services-list-content-item-link">
               <img
                 className="services-list-content-item-link-img"
-                src={isHovered ? '/assets/umbrella-primary.svg' : '/assets/umbrella.svg'}
+                src={
+                  isHovered === category.id
+                    ? '/assets/umbrella-primary.svg'
+                    : '/assets/umbrella.svg'
+                }
                 alt="umbrella"
                 style={{
                   transition: 'transform 1.5s',

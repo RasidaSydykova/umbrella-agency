@@ -29,7 +29,7 @@ interface Props {
   }[];
 }
 
-const ServiceTabs: React.FC<Props> = ({ tabs }) => {
+const ServiceTabs: React.FC<any> = ({ tabs }) => {
   const [value, setValue] = React.useState<number>(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -56,7 +56,7 @@ const ServiceTabs: React.FC<Props> = ({ tabs }) => {
                 scrollButtons="auto"
                 allowScrollButtonsMobile={false}
               >
-                {tabs?.map((tab, index) => {
+                {tabs?.map((tab: any, index: any) => {
                   return <Tab label={tab.title} {...a11yProps(index)} />;
                 })}
               </Tabs>
@@ -64,9 +64,9 @@ const ServiceTabs: React.FC<Props> = ({ tabs }) => {
           </div>
         </div>
 
-        {tabs?.map((data, index) => (
+        {tabs?.map((data: any, index : number) => (
           <CustomTabPanel key={index} value={value} index={index}>
-            {data.sections?.map((section) => {
+            {data.sections?.map((section: any) => {
               return (
                 <div className="service-tabs-content-info container" key={section.id}>
                   <h3 className="service-tabs-content-info-title">{section?.title}</h3>

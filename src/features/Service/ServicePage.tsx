@@ -29,7 +29,7 @@ const ServicePage = () => {
           short_description_for_banner={servicePage[0]?.short_description_for_banner}
           gif={servicePage[0]?.gif}
         />
-        <ServiceTabs tabs={servicePage[0]?.tabs}/>
+        <ServiceTabs tabs={servicePage[0]?.tabs as any}/>
       </div>
       <Footer />
     </div>

@@ -93,6 +93,10 @@
     }
 
     &-wrapper {
+      position: absolute;
+      @media (max-width: 769px) {
+        position: relative;
+      }
       &-list {
         color: $neutral-01;
         font-size: 24px;
