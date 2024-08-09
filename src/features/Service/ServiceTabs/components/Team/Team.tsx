@@ -9,7 +9,11 @@ const Team = ({ team }) => {
       </div>
       <div className="team-specialists">
         <div className="specialists">
-          {team.map((item: {id: number; position: string}) => <span className="specialist" key={item.id}>{item.position}</span>)}
+          {team.map((item: { id: number; position: string }) => (
+            <span className="specialist" key={item.id}>
+              {item.position}
+            </span>
+          ))}
         </div>
       </div>
     </section>

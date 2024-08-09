@@ -4,13 +4,16 @@ import Link from 'next/link';
 import NavList from '@/UI/Toolbar/components/NavList/NavList';
 import FormLink from '@/components/FormLink/FormLink';
 import '../Toolbar/Toolbar.scss';
+import { usePathname } from 'next/navigation';
 
 const Toolbar = () => {
   const [open, setOpen] = useState<boolean>(false);
 
+  const pathname = usePathname()
+
   useEffect(() => {
-    setOpen(!open)
-  }, [location.pathname])
+    setOpen(false)
+  }, [pathname])
 
   return (
     <header className="header">

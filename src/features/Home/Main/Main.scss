@@ -4,8 +4,12 @@
   margin-top: 130px;
 
   &-banner {
+    position: relative;
     min-height: 125vh;
     margin-top: -300px;
+    .background {
+      position: absolute;
+    }
 
     @include sm {
       height: 534px;
@@ -14,8 +18,6 @@
     &-wrapper {
       padding-top: 250px;
       height: 100%;
-      background: url('../../../../public/assets/main-umbrella.svg') right 80px bottom 50px
-        no-repeat;
       background-size: 535px 696px;
       padding-right: 30px;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import WorkStartCard from '@/features/Service/ServiceTabs/components/WorkStartSteps/components/WorkStartCard/WorkStartCard';
 import './WorkStartSteps.scss';
 
-const WorkStartSteps = () => {
+const WorkStartSteps = ({ steps }) => {
   const cardsData = [
     {
       index: 1,
@@ -34,8 +34,8 @@ const WorkStartSteps = () => {
     <section className="work-start-steps container">
       <h4 className="work-start-steps-title">До начала работы:</h4>
       <div className="work-start-steps-cards">
-        {cardsData.map((card, i) => (
-          <WorkStartCard key={i} index={card.index} title={card.title} text={card.text} />
+        {steps.map((card, i) => (
+          <WorkStartCard key={i} index={i + 1} title={card.title} text={card.description} />
         ))}
       </div>
       <div className="start">

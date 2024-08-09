@@ -15,13 +15,18 @@ interface Props {
     portfolios: {
       id: number;
       img: string | null;
-      title: string
-    }[]
+      title: string;
+    }[];
     title: string;
     sections?: Section[];
     processes?: IProcess[];
     team?: TeamMember[];
-  }[]
+    steps: {
+      description: string;
+      id: number;
+      title: string;
+    };
+  }[];
 }
 
 const ServiceTabs: React.FC<Props> = ({ tabs }) => {
@@ -52,7 +57,7 @@ const ServiceTabs: React.FC<Props> = ({ tabs }) => {
                 allowScrollButtonsMobile={false}
               >
                 {tabs?.map((tab, index) => {
-                  return <Tab label={tab.title} {...a11yProps(index)}/>
+                  return <Tab label={tab.title} {...a11yProps(index)} />;
                 })}
               </Tabs>
             </Box>
@@ -64,19 +69,15 @@ const ServiceTabs: React.FC<Props> = ({ tabs }) => {
             {data.sections?.map((section) => {
               return (
                 <div className="service-tabs-content-info container" key={section.id}>
-                  <h3 className="service-tabs-content-info-title">
-                    {section?.title}
-                  </h3>
-                  <p className="service-tabs-content-info-text">
-                    {section?.description}
-                  </p>
+                  <h3 className="service-tabs-content-info-title">{section?.title}</h3>
+                  <p className="service-tabs-content-info-text">{section?.description}</p>
                 </div>
-              )
+              );
             })}
             <div>
-              <Process processes={data.processes}/>
-              <Team team={data.team}/>
-              <WorkStartSteps />
+              <Process processes={data.processes} />
+              <Team team={data.team} />
+              <WorkStartSteps steps={data.steps} />
             </div>
           </CustomTabPanel>
         ))}

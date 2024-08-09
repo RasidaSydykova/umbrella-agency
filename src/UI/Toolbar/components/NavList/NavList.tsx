@@ -22,16 +22,6 @@ const NavList: React.FC<Props> = ({ isMobile }) => {
     dispatch(fetchServices())
   }, [])
 
-  // const listData = ['Разработка стратегии Маркетинг 360'];
-
-  // const dropdownData = [
-  //   { title: 'Поисковая оптимизация (SEO)', list: listData },
-  //   { title: 'Поисковая оптимизация (SEO)', list: listData },
-  //   { title: 'Поисковая оптимизация (SEO)', list: listData },
-  //   { title: 'Поисковая оптимизация (SEO)', list: listData },
-  //   { title: 'Поисковая оптимизация (SEO)', list: listData },
-  // ];
-
   const dropdownData = services.map((service) => {return {
     title: service.title, list: service.category?.map((tab) => {return tab.title}), id: service.id
   }})
@@ -76,7 +66,7 @@ const NavList: React.FC<Props> = ({ isMobile }) => {
           )}
           {open && (
             <div className={open ? 'dropdown active' : 'dropdown'}>
-              <h6 className="dropdown-title">{dropdownData[0].title}</h6>
+              <h6 className="dropdown-title">{dropdownData[0]?.title}</h6>
               {dropdownData.map((item, index) => (
                 <DropdownList key={index} list={item.list} id={item.id}/>
               ))}

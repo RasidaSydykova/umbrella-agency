@@ -11,19 +11,21 @@ import './Home.scss';
 
 const Home = () => {
   useEffect(() => {
-    document.title = 'Home';
+    document.title = 'Home'    
   }, []);
-
+  
   return (
-    <div className="home">
-      <Main />
-      <AboutUs />
-      <OurWorks />
-      <Services />
-      <OurApproach />
-      <Reviews />
-      <Footer />
-    </div>
+    <>
+      <div className="home">
+        <Main />
+        <AboutUs />
+        <OurWorks />
+        <Services />
+        <OurApproach />
+        <Reviews />
+        <Footer />
+      </div>
+    </>
   );
 };
 

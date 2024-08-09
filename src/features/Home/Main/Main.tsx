@@ -1,6 +1,7 @@
 import React from 'react';
 import FormLink from '@/components/FormLink/FormLink';
 import './Main.scss';
+import Background from '@/UI/Background/Background';
 
 const Main = () => {
   const bannerLink = `url("/assets/main-img.jpeg")`;
@@ -11,6 +12,9 @@ const Main = () => {
         style={{ backgroundImage: bannerLink, backgroundSize: 'cover' }}
       >
         <div className="hero-section-banner-wrapper container">
+          <div className="background">
+            <Background />
+          </div>
           <h1 className="hero-section-banner-wrapper-title">
             Мы стремимся стать партнером в digital-маркетинге, которому вы доверяете
           </h1>
